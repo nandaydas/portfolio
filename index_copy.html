@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nanday Das | Software Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of a passionate Software Developer specializing in building exceptional digital experiences."
+    />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="Software Developer, Web Developer, Mobile Developer, Portfolio, Frontend, Backend, Full Stack, React, Node.js, JavaScript, TypeScript, Python, Nanday Das" />
+    <meta name="author" content="Nanday Das" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Nanday Das | Software Developer" />
+    <meta property="og:description" content="Portfolio of a passionate Software Developer specializing in building exceptional digital experiences. Explore my projects and get in touch for collaboration." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nandaydas.in" />
+    <meta property="og:site_name" content="Nanday Das" />
+    <meta property="og:image" content="https://nandaydas.in/assets/icon.jpg" />      <!-- TODO -->
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Nanday Das - Software Developer" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#3b82f6" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nandaydas.in" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/icon.jpg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon.jpg" />
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3b82f6", // Blue-500
+              secondary: "#64748b", // Slate-500
+              dark: "#0f172a", // Slate-900
+              darker: "#020617", // Slate-950
+              card: "#1e293b", // Slate-800
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons (FontAwesome for brand icons, Lucide for UI icons via script if needed, but using inline SVG for speed) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- EmailJS SDK -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // Initialize EmailJS
+        emailjs.init("M-HNVKTs3-2MyN1uh");
+      })();
+    </script>
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #0f172a; /* Tailwind slate-900 */
+        color: #f8fafc; /* Tailwind slate-50 */
+      }
+
+      /* Prevent horizontal overflow on mobile */
+      html,
+      body {
+        overflow-x: hidden;
+        max-width: 100vw;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155;
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #475569;
+      }
+
+      .blob {
+        position: absolute;
+        filter: blur(80px);
+        z-index: -1;
+        opacity: 0.4;
+        animation: move 10s infinite alternate;
+      }
+      @keyframes move {
+        from {
+          transform: translate(0, 0) scale(1);
+        }
+        to {
+          transform: translate(20px, -20px) scale(1.1);
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="antialiased relative overflow-x-hidden min-w-0 w-full max-w-full"
+  >
+    <!-- Decorative Blobs -->
+    <div
+      class="blob bg-blue-600 w-64 h-64 rounded-full top-0 left-0 -translate-x-1/2 -translate-y-1/2"
+    ></div>
+    <div
+      class="blob bg-purple-600 w-80 h-80 rounded-full bottom-0 right-0 translate-x-1/3 translate-y-1/3"
+    ></div>
+
+    <!-- Navigation -->
+    <nav
+      class="fixed w-full z-50 top-0 start-0 border-b border-slate-800 bg-dark/80 backdrop-blur-md"
+    >
+      <div
+        class="max-w-7xl flex flex-wrap items-center justify-between mx-auto px-3 py-4 sm:px-4"
+      >
+        <a
+          href="#"
+          class="flex items-center space-x-2 rtl:space-x-reverse flex-shrink-0"
+        >
+          <span
+            class="self-center text-lg sm:text-xl md:text-2xl font-bold text-white"
+            >nandaydas<span class="text-primary">.in</span></span
+          >
+        </a>
+        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <a
+            href="#contact"
+            class="hidden md:inline-block text-white bg-primary hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center transition-all"
+            >Hire Me</a
+          >
+          <button
+            data-collapse-toggle="navbar-sticky"
+            type="button"
+            id="menu-toggle"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600"
+            aria-controls="navbar-sticky"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          id="navbar-sticky"
+        >
+          <ul
+            class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-700 rounded-lg bg-card md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent"
+          >
+            <li>
+              <a
+                href="#home"
+                class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-primary md:p-0"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="block py-2 px-3 text-gray-300 rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-primary md:p-0 transition-colors"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#skills"
+                class="block py-2 px-3 text-gray-300 rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-primary md:p-0 transition-colors"
+                >Skills</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                class="block py-2 px-3 text-gray-300 rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-primary md:p-0 transition-colors"
+                >Projects</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay (Script controls this) -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 z-40 bg-darker bg-opacity-95 hidden flex flex-col items-center justify-center space-y-8 md:hidden transition-opacity duration-300"
+    >
+      <button
+        id="close-menu"
+        class="absolute top-6 right-6 text-gray-400 hover:text-white"
+      >
+        <svg
+          class="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
+      <a
+        href="#home"
+        class="text-2xl font-bold text-white hover:text-primary mobile-link"
+        >Home</a
+      >
+      <a
+        href="#about"
+        class="text-2xl font-bold text-white hover:text-primary mobile-link"
+        >About</a
+      >
+      <a
+        href="#skills"
+        class="text-2xl font-bold text-white hover:text-primary mobile-link"
+        >Skills</a
+      >
+      <a
+        href="#projects"
+        class="text-2xl font-bold text-white hover:text-primary mobile-link"
+        >Projects</a
+      >
+      <a
+        href="#contact"
+        class="text-2xl font-bold text-white hover:text-primary mobile-link"
+        >Contact</a
+      >
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center pt-16"
+    >
+      <div
+        class="container mx-auto px-4 sm:px-6 max-w-7xl flex flex-col-reverse lg:flex-row items-center w-full"
+      >
+        <div class="w-full lg:w-1/2 text-center lg:text-left mt-10 lg:mt-0">
+          <span
+            class="text-primary font-semibold tracking-wider uppercase mb-2 block animate-pulse"
+            >Hello, World!</span
+          >
+          <h1
+            class="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6 leading-tight break-words"
+          >
+            I'm
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600"
+              >Nanday</span
+            >,<br />
+            Software Developer.
+          </h1>
+          <p
+            class="text-slate-400 text-lg md:text-xl mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed"
+          >
+            I build accessible, pixel-perfect, and performant digital
+            experiences. Passionate about transforming ideas into code with a
+            focus on mobile and web technologies.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+          >
+            <a
+              href="#projects"
+              class="px-8 py-3.5 rounded-lg bg-primary text-white font-semibold hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2"
+            >
+              View Work
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://github.com/nandaydas"
+              target="_blank"
+              class="px-8 py-3.5 rounded-lg border border-slate-600 text-white font-semibold hover:bg-slate-800 transition-all flex items-center justify-center gap-2"
+            >
+              <i class="fab fa-github text-xl"></i> GitHub
+            </a>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
+          <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-2xl opacity-30 animate-pulse"
+            ></div>
+            <img
+              src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Developer Portrait"
+              class="relative w-full h-full object-cover rounded-full border-4 border-slate-800 shadow-2xl hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 md:py-20 bg-darker/50">
+      <div class="container mx-auto px-3 sm:px-6 max-w-7xl">
+        <div class="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
+          <div class="w-full lg:w-1/2">
+            <img
+              src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+              alt="Mobile Development"
+              class="rounded-xl shadow-2xl border border-slate-700 hover:shadow-blue-500/20 transition-shadow"
+            />
+          </div>
+          <div class="w-full lg:w-1/2">
+            <h2
+              class="text-3xl font-bold text-white mb-6 flex items-center gap-3"
+            >
+              <span class="w-12 h-1 bg-primary rounded-full"></span>
+              About Me
+            </h2>
+            <p class="text-slate-400 leading-relaxed mb-6">
+              I am a passionate Mobile Application Developer with a primary
+              focus on creating cross-platform solutions. My expertise lies in
+              <strong>Flutter and Dart</strong>, allowing me to craft
+              pixel-perfect, performant apps that run smoothly on both Android
+              and iOS from a single codebase.
+            </p>
+            <p class="text-slate-400 leading-relaxed mb-8">
+              In addition to mobile development, I possess a foundational
+              understanding of web technologies and backend systems. This allows
+              me to effectively integrate mobile apps with REST APIs and cloud
+              services like Firebase, ensuring a complete and robust digital
+              solution.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div class="p-4 bg-card rounded-lg border border-slate-700">
+                <h3 class="text-2xl font-bold text-primary mb-1">Flutter</h3>
+                <p class="text-sm text-slate-400">Specialist</p>
+              </div>
+              <div class="p-4 bg-card rounded-lg border border-slate-700">
+                <h3 class="text-2xl font-bold text-primary mb-1">20+</h3>
+                <p class="text-sm text-slate-400">Apps Deployed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-12 md:py-20">
+      <div class="container mx-auto px-3 sm:px-6 max-w-7xl">
+        <div class="text-center mb-10 md:mb-16">
+          <h2 class="text-3xl font-bold text-white mb-4">Technical Skills</h2>
+          <p class="text-slate-400 max-w-2xl mx-auto">
+            My primary focus is Mobile Development, complemented by essential
+            web knowledge.
+          </p>
+        </div>
+
+        <!-- Skills Categories -->
+        <div class="flex flex-wrap justify-center gap-8">
+          <!-- Mobile Development -->
+          <div
+            class="bg-card p-6 rounded-xl border border-slate-700 hover:border-primary/50 transition-all w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.34rem)]"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mr-4"
+              >
+                <i class="fab fa-android text-primary text-xl"></i>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-white">
+                Mobile Development
+              </h3>
+            </div>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-slate-300 text-sm">Flutter</span>
+                <div class="w-24 sm:w-32 bg-slate-700 rounded-full h-2 ml-2">
+                  <div
+                    class="bg-primary h-2 rounded-full"
+                    style="width: 95%"
+                  ></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-300 text-sm">Dart</span>
+                <div class="w-24 sm:w-32 bg-slate-700 rounded-full h-2 ml-2">
+                  <div
+                    class="bg-primary h-2 rounded-full"
+                    style="width: 95%"
+                  ></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-300 text-sm">Android SDK</span>
+                <div class="w-24 sm:w-32 bg-slate-700 rounded-full h-2 ml-2">
+                  <div
+                    class="bg-primary h-2 rounded-full"
+                    style="width: 80%"
+                  ></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-300 text-sm">iOS Development</span>
+                <div class="w-24 sm:w-32 bg-slate-700 rounded-full h-2 ml-2">
+                  <div
+                    class="bg-primary h-2 rounded-full"
+                    style="width: 75%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Web Development -->
+          <div
+            class="bg-card p-6 rounded-xl border border-slate-700 hover:border-primary/50 transition-all w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.34rem)]"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-code text-primary text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">Web Development</h3>
+            </div>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-slate-300 text-sm">HTML/CSS</span>
+                <div class="w-24 sm:w-32 bg-slate-700 rounded-full h-2 ml-2">
+                  <div
+                    class="bg-primary h-2 rounded-full"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-300 text-sm">JavaScript</span>
+                <div class="w-24 sm:w-32 bg-slate-700 rounded-full h-2 ml-2">
+                  <div
+                    class="bg-primary h-2 rounded-full"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-300 text-sm">React</span>
+                <div class="w-24 sm:w-32 bg-slate-700 rounded-full h-2 ml-2">
+                  <div
+                    class="bg-primary h-2 rounded-full"
+                    style="width: 75%"
+                  ></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-300 text-sm">Tailwind CSS</span>
+                <div class="w-24 sm:w-32 bg-slate-700 rounded-full h-2 ml-2">
+                  <div
+                    class="bg-primary h-2 rounded-full"
+                    style="width: 88%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend & Database -->
+          <div
+            class="bg-card p-6 rounded-xl border border-slate-700 hover:border-primary/50 transition-all w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.34rem)]"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-database text-primary text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">Backend & Database</h3>
+            </div>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-slate-300 text-sm">Firebase</span>
+                <div class="w-24 sm:w-32 bg-slate-700 rounded-full h-2 ml-2">
+                  <div
+                    class="bg-primary h-2 rounded-full"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-300 text-sm">REST APIs</span>
+                <div class="w-24 sm:w-32 bg-slate-700 rounded-full h-2 ml-2">
+                  <div
+                    class="bg-primary h-2 rounded-full"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-300 text-sm">SQLite</span>
+                <div class="w-24 sm:w-32 bg-slate-700 rounded-full h-2 ml-2">
+                  <div
+                    class="bg-primary h-2 rounded-full"
+                    style="width: 80%"
+                  ></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-300 text-sm">Node.js</span>
+                <div class="w-24 sm:w-32 bg-slate-700 rounded-full h-2 ml-2">
+                  <div
+                    class="bg-primary h-2 rounded-full"
+                    style="width: 70%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools & Technologies -->
+          <div
+            class="bg-card p-6 rounded-xl border border-slate-700 hover:border-primary/50 transition-all w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.34rem)]"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-tools text-primary text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">Tools & Technologies</h3>
+            </div>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-slate-300 text-sm">Git/GitHub</span>
+                <div class="w-24 sm:w-32 bg-slate-700 rounded-full h-2 ml-2">
+                  <div
+                    class="bg-primary h-2 rounded-full"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-300 text-sm">VS Code</span>
+                <div class="w-24 sm:w-32 bg-slate-700 rounded-full h-2 ml-2">
+                  <div
+                    class="bg-primary h-2 rounded-full"
+                    style="width: 95%"
+                  ></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-300 text-sm">Android Studio</span>
+                <div class="w-24 sm:w-32 bg-slate-700 rounded-full h-2 ml-2">
+                  <div
+                    class="bg-primary h-2 rounded-full"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-300 text-sm">Figma</span>
+                <div class="w-24 sm:w-32 bg-slate-700 rounded-full h-2 ml-2">
+                  <div
+                    class="bg-primary h-2 rounded-full"
+                    style="width: 75%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cloud & DevOps -->
+          <div
+            class="bg-card p-6 rounded-xl border border-slate-700 hover:border-primary/50 transition-all w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.34rem)]"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-cloud text-primary text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">Cloud & DevOps</h3>
+            </div>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-slate-300 text-sm">Firebase Hosting</span>
+                <div class="w-24 sm:w-32 bg-slate-700 rounded-full h-2 ml-2">
+                  <div
+                    class="bg-primary h-2 rounded-full"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-300 text-sm">Google Cloud</span>
+                <div class="w-24 sm:w-32 bg-slate-700 rounded-full h-2 ml-2">
+                  <div
+                    class="bg-primary h-2 rounded-full"
+                    style="width: 70%"
+                  ></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-300 text-sm">Play Store</span>
+                <div class="w-24 sm:w-32 bg-slate-700 rounded-full h-2 ml-2">
+                  <div
+                    class="bg-primary h-2 rounded-full"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-300 text-sm">App Store</span>
+                <div class="w-24 sm:w-32 bg-slate-700 rounded-full h-2 ml-2">
+                  <div
+                    class="bg-primary h-2 rounded-full"
+                    style="width: 80%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-12 md:py-20 bg-darker/50">
+      <div class="container mx-auto px-3 sm:px-6 max-w-7xl">
+        <div class="text-center mb-10 md:mb-16">
+          <h2 class="text-3xl font-bold text-white mb-4">Projects</h2>
+          <p class="text-slate-400 max-w-2xl mx-auto">
+            Some of my featured projects.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1: RentMate (New Featured Project) -->
+          <div
+            class="group bg-card rounded-xl overflow-hidden border border-slate-700 hover:border-primary/50 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300"
+          >
+            <div class="relative overflow-hidden h-48">
+              <img
+                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="RentMate App"
+                class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4"
+              >
+                <a
+                  href="https://rentmate.in"
+                  class="p-2 bg-white rounded-full text-dark hover:bg-primary hover:text-white transition-colors"
+                  title="View Details"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3
+                class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors"
+              >
+                RentMate
+              </h3>
+              <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                A comprehensive renting solution app simplifying property
+                management for landlords and tenants. Streamlines payments,
+                maintenance requests, and agreements.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-slate-800 text-xs text-primary rounded border border-slate-700"
+                  >Flutter</span
+                >
+                <span
+                  class="px-2 py-1 bg-slate-800 text-xs text-primary rounded border border-slate-700"
+                  >Firebase</span
+                >
+                <span
+                  class="px-2 py-1 bg-slate-800 text-xs text-primary rounded border border-slate-700"
+                  >GetX</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="group bg-card rounded-xl overflow-hidden border border-slate-700 hover:border-primary/50 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300"
+          >
+            <div class="relative overflow-hidden h-48">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1661890079209-72b76e49768f?q=80&w=1105&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="Social Chat App"
+                class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4"
+              >
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.sixcric.live"
+                  class="p-2 bg-white rounded-full text-dark hover:bg-primary hover:text-white transition-colors"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3
+                class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors"
+              >
+                SixCric - Live Cricket
+              </h3>
+              <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                SixCric is a Flutter app powered by Firebase and GetX that delivers live cricket scores, match schedules, and detailed stats using a fast REST API.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-slate-800 text-xs text-primary rounded border border-slate-700"
+                  >Flutter</span
+                >
+                <span
+                  class="px-2 py-1 bg-slate-800 text-xs text-primary rounded border border-slate-700"
+                  >Firebase</span
+                >
+                <span
+                  class="px-2 py-1 bg-slate-800 text-xs text-primary rounded border border-slate-700"
+                  >Rest API</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="group bg-card rounded-xl overflow-hidden border border-slate-700 hover:border-primary/50 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300"
+          >
+            <div class="relative overflow-hidden h-48">
+              <img
+                src="https://images.unsplash.com/photo-1603985529862-9e12198c9a60?q=80&w=1161&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="Travel Companion App"
+                class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4"
+              >
+                <a
+                  href="https://github.com/nandaydas/VPN-project"
+                  class="p-2 bg-white rounded-full text-dark hover:bg-primary hover:text-white transition-colors"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3
+                class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors"
+              >
+                VPN Project
+              </h3>
+              <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                A Flutter VPN app powered by Firebase and GetX, offering secure and easy-to-use private connections.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-slate-800 text-xs text-primary rounded border border-slate-700"
+                  >Flutter</span
+                >
+                <span
+                  class="px-2 py-1 bg-slate-800 text-xs text-primary rounded border border-slate-700"
+                  >Rest API</span
+                >
+                <span
+                  class="px-2 py-1 bg-slate-800 text-xs text-primary rounded border border-slate-700"
+                  >OpenVPN</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center md:hidden">
+          <a
+            href="#"
+            class="inline-flex items-center gap-2 text-primary hover:text-blue-400 transition-colors font-medium"
+          >
+            View All Projects <i class="fas fa-arrow-right text-sm"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 md:py-20">
+      <div class="container mx-auto px-3 sm:px-6 max-w-7xl">
+        <div class="max-w-3xl mx-auto">
+          <div class="text-center mb-10 md:mb-16">
+            <h2 class="text-3xl font-bold text-white mb-4">Get In Touch</h2>
+            <p class="text-slate-400">
+              Have a project in mind or want to say hi? I'd love to hear from
+              you.
+            </p>
+          </div>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 bg-card p-8 rounded-2xl border border-slate-700"
+          >
+            <!-- Contact Info -->
+            <div class="space-y-8">
+              <h3 class="text-xl font-bold text-white">Contact Information</h3>
+              <p class="text-slate-400">
+                I am currently open to full-time opportunities and freelance
+                projects.
+              </p>
+
+              <div class="space-y-4">
+                <div class="flex items-center gap-4 text-slate-300">
+                  <div
+                    class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-primary"
+                  >
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <span>contact@nandaydas.in</span>
+                </div>
+                <div class="flex items-center gap-4 text-slate-300">
+                  <div
+                    class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-primary"
+                  >
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <span>Tripura, India</span>
+                </div>
+              </div>
+
+              <div class="pt-8">
+                <h4 class="text-white font-medium mb-4">Follow Me</h4>
+                <div class="flex gap-4">
+                  <a
+                    href="https://github.com/nandaydas"
+                    class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-gray-700 hover:text-white transition-all"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/nanday-das"
+                    class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/@techdeveloper2971"
+                    class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-red-600 hover:text-white transition-all"
+                  >
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form -->
+            <form
+              id="contact-form"
+              class="space-y-4"
+              onsubmit="sendEmail(event)"
+            >
+              <div>
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-slate-300 mb-1"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="from_name"
+                  class="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-slate-300 mb-1"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="from_email"
+                  class="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors"
+                  placeholder="your@email.com"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-slate-300 mb-1"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors"
+                  placeholder="Tell me about your project..."
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full px-6 py-3 bg-primary hover:bg-blue-600 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
+              >
+                Send Message
+                <i class="fas fa-paper-plane text-xs"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script>
+        fetch("footer.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+            lucide.createIcons(); // render icons AFTER footer loads
+        });
+    </script>
+
+    <!-- Scripts -->
+    <script>
+      // Mobile Menu Logic
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const closeMenu = document.getElementById("close-menu");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+
+      function toggleMenu() {
+        mobileMenu.classList.toggle("hidden");
+        document.body.classList.toggle("overflow-hidden"); // Prevent scrolling when menu is open
+      }
+
+      menuToggle.addEventListener("click", toggleMenu);
+      closeMenu.addEventListener("click", toggleMenu);
+
+      // Close menu when clicking a link
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", toggleMenu);
+      });
+
+      // Sticky Navbar background change on scroll
+      const navbar = document.querySelector("nav");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 20) {
+          navbar.classList.add("shadow-lg");
+        } else {
+          navbar.classList.remove("shadow-lg");
+        }
+      });
+
+      // EmailJS Integration
+      function sendEmail(e) {
+        e.preventDefault();
+
+        const btn = e.target.querySelector('button[type="submit"]');
+        const originalText = btn.innerHTML;
+
+        // Loading state
+        btn.innerHTML =
+          'Sending... <i class="fas fa-spinner fa-spin ml-2"></i>';
+        btn.disabled = true;
+
+        // Prepare template parameters
+        const templateParams = {
+          from_name: document.getElementById("name").value,
+          from_email: document.getElementById("email").value,
+          message: document.getElementById("message").value,
+          to_name: "Nanday",
+        };
+        
+        emailjs
+          .send("service_0jqyre8", "portfollio_contact_form", templateParams)
+          .then(
+            function (response) {
+              alert("Message sent successfully!");
+              document.getElementById("contact-form").reset();
+            },
+            function (error) {
+              alert("Failed to send message. Please try again later.");
+              console.error("FAILED...", error);
+            }
+          )
+          .finally(() => {
+            // Reset button
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+          });
+      }
+    </script>
+  </body>
+</html>
