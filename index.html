@@ -1,310 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nanday Das | Software Developer</title>
-    <meta name="description"
-        content="Portfolio of a passionate Software Developer specializing in building exceptional digital experiences." />
-
-    <!-- SEO Meta Tags -->
-    <meta name="keywords"
-        content="Software Developer, Web Developer, Mobile Developer, Portfolio, Frontend, Backend, Full Stack, React, Node.js, JavaScript, TypeScript, Python, Nanday Das" />
+    <meta name="description" content="Portfolio of Nanday Das, a Flutter specialist building cross-platform mobile experiences." />
     <meta name="author" content="Nanday Das" />
-    <meta name="robots" content="index, follow" />
-    <meta name="language" content="English" />
-    <meta name="revisit-after" content="7 days" />
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Nanday Das | Software Developer" />
-    <meta property="og:description"
-        content="Portfolio of a passionate Software Developer specializing in building exceptional digital experiences. Explore my projects and get in touch for collaboration." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://nandaydas.in" />
-    <meta property="og:site_name" content="Nanday Das" />
-    <meta property="og:image" content="https://nandaydas.in/assets/icon.jpg" /> <!-- TODO -->
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Nanday Das - Software Developer" />
-    <meta property="og:locale" content="en_US" />
-
-    <!-- Theme Color -->
     <meta name="theme-color" content="#3b82f6" />
-
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://nandaydas.in" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/assets/icon.jpg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon.jpg" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #030303;
-            --accent: #ffffff;
-            --muted: #94a3b8;
-            --card-bg: rgba(15, 15, 25, 0.6);
-            --border: rgba(255, 255, 255, 0.05);
-            --primary-glow: rgba(59, 130, 246, 0.15);
-            --secondary-glow: rgba(6, 182, 212, 0.12);
+            --bg: #030303; --accent: #ffffff; --muted: #94a3b8;
+            --card-bg: rgba(15,15,25,0.6); --border: rgba(255,255,255,0.05);
+            --primary-glow: rgba(59,130,246,0.15); --secondary-glow: rgba(6,182,212,0.12);
         }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg);
-            color: var(--accent);
-            scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-        }
-
-        h1,
-        h2,
-        h3,
-        .font-outfit {
-            font-family: 'Outfit', sans-serif;
-        }
-
-        /* Subtle Background Atmosphere */
-        .glow-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-            pointer-events: none;
-        }
-
-        .blob {
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
-            border-radius: 50%;
-            filter: blur(80px);
-            animation: move 20s infinite alternate;
-        }
-
-        .blob-2 {
-            top: 40%;
-            right: -10%;
-            background: radial-gradient(circle, var(--secondary-glow) 0%, transparent 70%);
-            animation-duration: 25s;
-        }
-
-        @keyframes move {
-            from {
-                transform: translate(0, 0);
-            }
-
-            to {
-                transform: translate(100px, 100px);
-            }
-        }
-
-        .noise {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            content: "";
-            opacity: .02;
-            z-index: 9999;
-            pointer-events: none;
-            background: url('https://grainy-gradients.vercel.app/noise.svg');
-        }
-
-        .bento-card {
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border);
-            border-radius: 28px;
-            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .bento-card:hover {
-            border-color: rgba(59, 130, 246, 0.3);
-            background: rgba(10, 15, 30, 0.8);
-            transform: translateY(-6px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(59, 130, 246, 0.05);
-        }
-
-        .nav-blur {
-            backdrop-filter: blur(20px);
-            background: rgba(3, 3, 3, 0.7);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .pill {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border);
-            padding: 6px 16px;
-            border-radius: 100px;
-            font-size: 0.75rem;
-            color: var(--muted);
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .pill:hover {
-            background: rgba(59, 130, 246, 0.1);
-            border-color: rgba(59, 130, 246, 0.4);
-            color: white;
-        }
-
-        .cursor-dot {
-            width: 6px;
-            height: 6px;
-            background: white;
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 10000;
-        }
-
-        .cursor-outline {
-            width: 34px;
-            height: 34px;
-            border: 1px solid rgba(59, 130, 246, 0.5);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            transition: all 0.15s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        @keyframes reveal {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .reveal {
-            opacity: 0;
-            animation: reveal 1s forwards;
-        }
-
-        /* FAQ Styling */
-        .faq-btn {
-            width: 100%;
-            text-align: left;
-            padding: 24px 0;
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: color 0.3s ease;
-        }
-
-        .faq-btn:hover {
-            color: #3b82f6;
-        }
-
-        .faq-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        .faq-item.active .faq-content {
-            max-height: 200px;
-            padding-bottom: 24px;
-        }
-
-        .faq-item.active svg {
-            transform: rotate(45deg);
-            color: #3b82f6;
-        }
-
-        .image-reveal {
-            filter: saturate(0.2) brightness(0.8);
-            transition: all 0.7s ease;
-        }
-
-        .bento-card:hover .image-reveal {
-            filter: saturate(1.1) brightness(1);
-            transform: scale(1.05);
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #fff 0%, #3b82f6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--accent); scroll-behavior:smooth; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+        h1,h2,h3,.font-outfit { font-family:'Outfit',sans-serif; }
+        .glow-bg { position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; overflow:hidden; pointer-events:none; }
+        .blob { position:absolute; width:600px; height:600px; background:radial-gradient(circle,var(--primary-glow) 0%,transparent 70%); border-radius:50%; filter:blur(80px); animation:move 20s infinite alternate; }
+        .blob-2 { top:40%; right:-10%; background:radial-gradient(circle,var(--secondary-glow) 0%,transparent 70%); animation-duration:25s; }
+        @keyframes move { from{transform:translate(0,0)} to{transform:translate(100px,100px)} }
+        .noise { position:fixed; top:0; left:0; width:100%; height:100%; opacity:.02; z-index:9999; pointer-events:none; background:url('https://grainy-gradients.vercel.app/noise.svg'); }
+        .bento-card { background:var(--card-bg); backdrop-filter:blur(12px); border:1px solid var(--border); border-radius:28px; transition:all 0.5s cubic-bezier(0.23,1,0.32,1); position:relative; overflow:hidden; }
+        .bento-card:hover { border-color:rgba(59,130,246,0.3); background:rgba(10,15,30,0.8); transform:translateY(-6px); box-shadow:0 20px 40px rgba(0,0,0,0.4),0 0 20px rgba(59,130,246,0.05); }
+        .nav-blur { backdrop-filter:blur(20px); background:rgba(3,3,3,0.7); border-bottom:1px solid var(--border); }
+        .pill { background:rgba(255,255,255,0.03); border:1px solid var(--border); padding:6px 16px; border-radius:100px; font-size:0.75rem; color:var(--muted); transition:all 0.3s ease; display:inline-flex; align-items:center; gap:6px; }
+        .pill:hover { background:rgba(59,130,246,0.1); border-color:rgba(59,130,246,0.4); color:white; }
+        .cursor-dot { width:6px; height:6px; background:white; border-radius:50%; position:fixed; pointer-events:none; z-index:10000; transform:translate(-50%,-50%); }
+        .cursor-outline { width:34px; height:34px; border:1px solid rgba(59,130,246,0.5); border-radius:50%; position:fixed; pointer-events:none; z-index:9999; transition:all 0.15s cubic-bezier(0.23,1,0.32,1); transform:translate(-50%,-50%); }
+        @keyframes reveal { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+        .reveal { opacity:0; animation:reveal 1s forwards; }
+        .faq-btn { width:100%; text-align:left; padding:24px 0; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; transition:color 0.3s ease; }
+        .faq-btn:hover { color:#3b82f6; }
+        .faq-content { max-height:0; overflow:hidden; transition:all 0.4s cubic-bezier(0.4,0,0.2,1); color:var(--muted); font-size:0.95rem; }
+        .faq-item.active .faq-content { max-height:200px; padding-bottom:24px; }
+        .faq-item.active svg { transform:rotate(45deg); color:#3b82f6; }
+        .image-reveal { filter:saturate(0.2) brightness(0.8); transition:all 0.7s ease; }
+        .bento-card:hover .image-reveal { filter:saturate(1.1) brightness(1); transform:scale(1.05); }
+        .gradient-text { background:linear-gradient(135deg,#fff 0%,#3b82f6 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+        @keyframes shimmer { 0%{background-position:-800px 0} 100%{background-position:800px 0} }
+        .skeleton { background:linear-gradient(90deg,rgba(255,255,255,0.04) 25%,rgba(255,255,255,0.09) 50%,rgba(255,255,255,0.04) 75%); background-size:800px 100%; animation:shimmer 1.5s infinite; border-radius:28px; }
+        .project-link { position:absolute; inset:0; z-index:10; }
+        .tech-pill { background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.2); color:#93c5fd; padding:3px 10px; border-radius:100px; font-size:0.65rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; }
+        .ext-icon { opacity:0; transition:opacity 0.3s ease; }
+        .bento-card:hover .ext-icon { opacity:1; }
     </style>
 </head>
-
 <body>
     <div class="noise"></div>
-    <div class="glow-bg">
-        <div class="blob"></div>
-        <div class="blob blob-2"></div>
-    </div>
-
+    <div class="glow-bg"><div class="blob"></div><div class="blob blob-2"></div></div>
     <div id="cursor-dot" class="cursor-dot"></div>
     <div id="cursor-outline" class="cursor-outline"></div>
 
-    <!-- Navigation -->
+    <!-- Nav -->
     <nav class="fixed top-0 w-full z-50 nav-blur">
         <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-            <a href="#" class="font-outfit font-bold text-2xl tracking-tighter">N<span
-                    class="text-blue-500">.</span>D</a>
-            <div class="hidden md:flex gap-10 text-xs font-semibold uppercase tracking-widest text-muted">
+            <a href="#" class="font-outfit font-bold text-2xl tracking-tighter">N<span class="text-blue-500">.</span>D</a>
+            <div class="hidden md:flex gap-10 text-xs font-semibold uppercase tracking-widest" style="color:var(--muted)">
                 <a href="#work" class="hover:text-white transition-colors">Work</a>
                 <a href="#about" class="hover:text-white transition-colors">About</a>
                 <a href="#testimonials" class="hover:text-white transition-colors">Vibe</a>
                 <a href="#contact" class="hover:text-white transition-colors">Contact</a>
             </div>
-            <a href="mailto:nandaydas@example.com"
-                class="pill !text-white !bg-blue-600/20 border-blue-500/20 hover:!bg-blue-600 hover:!border-blue-500 px-6 py-2 font-bold uppercase tracking-wider text-[10px]">Hire
-                Me</a>
+            <a href="mailto:nandaydas@example.com" class="pill !text-white !bg-blue-600/20 border-blue-500/20 hover:!bg-blue-600 hover:!border-blue-500 px-6 py-2 font-bold uppercase tracking-wider text-[10px]">Hire Me</a>
         </div>
     </nav>
 
     <!-- Hero -->
     <section class="min-h-screen flex flex-col justify-center px-6 pt-20">
         <div class="max-w-6xl mx-auto w-full">
-            <div class="pill mb-8 reveal" style="animation-delay: 0.2s">
+            <div class="pill mb-8 reveal" style="animation-delay:0.2s">
                 <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
                 Crafting cross-platform magic
             </div>
-            <h1 class="text-6xl md:text-9xl font-outfit font-extrabold leading-[0.95] tracking-tight reveal"
-                style="animation-delay: 0.4s">
+            <h1 class="text-6xl md:text-9xl font-outfit font-extrabold leading-[0.95] tracking-tight reveal" style="animation-delay:0.4s">
                 I build <span class="gradient-text">fluid</span> <br> mobile apps.
             </h1>
-            <div class="mt-16 flex flex-col md:flex-row items-start md:items-end justify-between gap-12 reveal"
-                style="animation-delay: 0.6s">
-                <p class="max-w-md text-lg text-muted leading-relaxed font-light">
-                    Hi, I'm <span class="text-white font-semibold">Nanday Das</span>. A Flutter specialist dedicated to
-                    building high-performance, beautiful mobile experiences that run natively on any screen.
+            <div class="mt-16 flex flex-col md:flex-row items-start md:items-end justify-between gap-12 reveal" style="animation-delay:0.6s">
+                <p class="max-w-md text-lg leading-relaxed font-light" style="color:var(--muted)">
+                    Hi, I'm <span class="text-white font-semibold">Nanday Das</span>. A Flutter specialist dedicated to building high-performance, beautiful mobile experiences that run natively on any screen.
                 </p>
                 <div class="flex items-center gap-6">
                     <div class="text-right">
-                        <p class="text-xs uppercase tracking-widest text-muted mb-1">Based in</p>
+                        <p class="text-xs uppercase tracking-widest mb-1" style="color:var(--muted)">Based in</p>
                         <p class="font-bold">Tripura, India</p>
                     </div>
                     <div class="w-[1px] h-10 bg-white/10"></div>
                     <div class="text-right">
-                        <p class="text-xs uppercase tracking-widest text-muted mb-1">Specialty</p>
+                        <p class="text-xs uppercase tracking-widest mb-1" style="color:var(--muted)">Specialty</p>
                         <p class="font-bold">Flutter & Dart</p>
                     </div>
                 </div>
@@ -312,7 +97,7 @@
         </div>
     </section>
 
-    <!-- Project Bento Grid -->
+    <!-- Projects -->
     <section id="work" class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
             <div class="flex justify-between items-end mb-16">
@@ -323,136 +108,53 @@
                     <div class="w-2 h-2 rounded-full bg-zinc-800"></div>
                 </div>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-                <!-- Large Project Card -->
-                <div class="md:col-span-8 bento-card h-[550px] group cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2000&auto=format&fit=crop"
-                        class="w-full h-full object-cover image-reveal" alt="Project">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
-                        <div class="flex gap-2 mb-4">
-                            <span class="pill !bg-blue-500/10 !border-blue-500/20 !text-blue-300">Flutter App</span>
-                            <span class="pill">iOS & Android</span>
-                        </div>
-                        <h3 class="text-4xl font-bold font-outfit">Zenith Commerce</h3>
-                        <p
-                            class="text-muted mt-2 max-w-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            A full-featured e-commerce engine built with Flutter and Firebase, featuring 60fps
-                            animations.</p>
-                    </div>
-                </div>
-
-                <!-- Small Project Card -->
-                <div class="md:col-span-4 bento-card h-[550px] group cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1000&auto=format&fit=crop"
-                        class="w-full h-full object-cover image-reveal" alt="Project">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
-                        <span class="pill mb-4 w-fit">UI/UX Design</span>
-                        <h3 class="text-4xl font-bold font-outfit">Velo Health</h3>
-                    </div>
-                </div>
-
-                <!-- Middle Grid -->
-                <div class="md:col-span-5 bento-card h-[450px] group cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1000&auto=format&fit=crop"
-                        class="w-full h-full object-cover image-reveal" alt="Project">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent p-8 flex flex-col justify-end">
-                        <h3 class="text-2xl font-bold font-outfit">Nova Dashboard</h3>
-                    </div>
-                </div>
-
-                <div class="md:col-span-7 bento-card h-[450px] group cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2000&auto=format&fit=crop"
-                        class="w-full h-full object-cover image-reveal" alt="Project">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent p-8 flex flex-col justify-end">
-                        <h3 class="text-2xl font-bold font-outfit">CryptoPulse</h3>
-                    </div>
-                </div>
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                <div class="md:col-span-8 skeleton h-[550px]"></div>
+                <div class="md:col-span-4 skeleton h-[550px]"></div>
+                <div class="md:col-span-5 skeleton h-[450px]"></div>
+                <div class="md:col-span-7 skeleton h-[450px]"></div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About -->
     <section id="about" class="py-24 px-6 relative">
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-                <!-- Bio Card -->
                 <div class="md:col-span-7 bento-card p-10 md:p-14 flex flex-col justify-between">
                     <div>
                         <p class="text-blue-400 font-bold uppercase tracking-widest text-xs mb-6">The Developer</p>
-                        <h2 class="text-3xl md:text-5xl font-outfit font-bold leading-tight mb-8">
-                            One codebase, <span class="text-blue-400">limitless</span> possibilities.
-                        </h2>
-                        <div class="space-y-6 text-muted leading-relaxed font-light text-lg">
-                            <p>
-                                I'm <span class="text-white font-medium">Nanday Das</span>. My obsession with mobile
-                                tech began with the idea that everyone should have access to great design, regardless of
-                                their device.
-                            </p>
-                            <p>
-                                Specializing in <strong>Flutter</strong>, I build applications that bridge the gap
-                                between high-end native performance and efficient cross-platform development. I don't
-                                just write code; I architect systems that scale and delight users.
-                            </p>
+                        <h2 class="text-3xl md:text-5xl font-outfit font-bold leading-tight mb-8">One codebase, <span class="text-blue-400">limitless</span> possibilities.</h2>
+                        <div class="space-y-6 leading-relaxed font-light text-lg" style="color:var(--muted)">
+                            <p>I'm <span class="text-white font-medium">Nanday Das</span>. My obsession with mobile tech began with the idea that everyone should have access to great design, regardless of their device.</p>
+                            <p>Specializing in <strong>Flutter</strong>, I build applications that bridge the gap between high-end native performance and efficient cross-platform development.</p>
                         </div>
                     </div>
                     <div class="mt-12 flex gap-8">
-                        <div>
-                            <p class="text-3xl font-bold font-outfit">Flutter</p>
-                            <p class="text-xs uppercase tracking-widest text-muted">Primary Stack</p>
-                        </div>
-                        <div>
-                            <p class="text-3xl font-bold font-outfit">25+</p>
-                            <p class="text-xs uppercase tracking-widest text-muted">Apps Shipped</p>
-                        </div>
-                        <div>
-                            <p class="text-3xl font-bold font-outfit">99%</p>
-                            <p class="text-xs uppercase tracking-widest text-muted">Crash-free rate</p>
-                        </div>
+                        <div><p class="text-3xl font-bold font-outfit">Flutter</p><p class="text-xs uppercase tracking-widest" style="color:var(--muted)">Primary Stack</p></div>
+                        <div><p class="text-3xl font-bold font-outfit">25+</p><p class="text-xs uppercase tracking-widest" style="color:var(--muted)">Apps Shipped</p></div>
+                        <div><p class="text-3xl font-bold font-outfit">99%</p><p class="text-xs uppercase tracking-widest" style="color:var(--muted)">Crash-free rate</p></div>
                     </div>
                 </div>
-
-                <!-- Profile/Skills Card -->
                 <div class="md:col-span-5 flex flex-col gap-6">
                     <div class="bento-card p-10 flex-grow bg-blue-500/5">
                         <p class="text-blue-400 font-bold uppercase tracking-widest text-xs mb-6">Capabilities</p>
                         <div class="flex flex-wrap gap-3">
-                            <span class="pill !bg-white/5 hover:!bg-blue-500/20 hover:!text-white">Flutter Dev</span>
-                            <span class="pill !bg-white/5 hover:!bg-blue-500/20 hover:!text-white">Dart
-                                Architecture</span>
-                            <span class="pill !bg-white/5 hover:!bg-blue-500/20 hover:!text-white">State
-                                Management</span>
-                            <span class="pill !bg-white/5 hover:!bg-blue-500/20 hover:!text-white">Firebase /
-                                Supabase</span>
-                            <span class="pill !bg-white/5 hover:!bg-blue-500/20 hover:!text-white">Custom
-                                Animations</span>
-                            <span class="pill !bg-white/5 hover:!bg-blue-500/20 hover:!text-white">CI/CD
-                                Pipelines</span>
+                            <span class="pill !bg-white/5">Flutter Dev</span>
+                            <span class="pill !bg-white/5">Dart Architecture</span>
+                            <span class="pill !bg-white/5">State Management</span>
+                            <span class="pill !bg-white/5">Firebase / Supabase</span>
+                            <span class="pill !bg-white/5">Custom Animations</span>
+                            <span class="pill !bg-white/5">CI/CD Pipelines</span>
                         </div>
                     </div>
                     <div class="bento-card p-10 bg-zinc-900/50">
                         <p class="text-blue-400 font-bold uppercase tracking-widest text-xs mb-6">Ecosystem</p>
                         <div class="grid grid-cols-2 gap-4">
-                            <div class="flex items-center gap-2 text-sm">
-                                <div class="w-2 h-2 rounded-full bg-blue-400"></div>
-                                <span class="font-medium">Flutter / Dart</span>
-                            </div>
-                            <div class="flex items-center gap-2 text-sm">
-                                <div class="w-2 h-2 rounded-full bg-orange-500"></div>
-                                <span class="font-medium">Firebase</span>
-                            </div>
-                            <div class="flex items-center gap-2 text-sm">
-                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
-                                <span class="font-medium">Node.js</span>
-                            </div>
-                            <div class="flex items-center gap-2 text-sm">
-                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                <span class="font-medium">REST / GraphQL</span>
-                            </div>
+                            <div class="flex items-center gap-2 text-sm"><div class="w-2 h-2 rounded-full bg-blue-400"></div><span class="font-medium">Flutter / Dart</span></div>
+                            <div class="flex items-center gap-2 text-sm"><div class="w-2 h-2 rounded-full bg-orange-500"></div><span class="font-medium">Firebase</span></div>
+                            <div class="flex items-center gap-2 text-sm"><div class="w-2 h-2 rounded-full bg-green-500"></div><span class="font-medium">Node.js</span></div>
+                            <div class="flex items-center gap-2 text-sm"><div class="w-2 h-2 rounded-full bg-blue-500"></div><span class="font-medium">REST / GraphQL</span></div>
                         </div>
                     </div>
                 </div>
@@ -460,49 +162,28 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials -->
     <section id="testimonials" class="py-24 px-6 relative overflow-hidden">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl font-outfit font-bold mb-16 text-center">Client feedback</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bento-card p-10 border-t-2 border-t-blue-500/20">
-                    <p class="text-lg leading-relaxed text-slate-200">"Nanday's mastery of Flutter is evident. He
-                        delivered a complex fintech app in half the time we expected."</p>
-                    <div class="mt-10 flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-zinc-800"></div>
-                        <div>
-                            <p class="font-bold">Rahul Mehta</p>
-                            <p class="text-xs text-muted">Product Head, Finly</p>
-                        </div>
-                    </div>
+                    <p class="text-lg leading-relaxed text-slate-200">"Nanday's mastery of Flutter is evident. He delivered a complex fintech app in half the time we expected."</p>
+                    <div class="mt-10 flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-zinc-800"></div><div><p class="font-bold">Rahul Mehta</p><p class="text-xs" style="color:var(--muted)">Product Head, Finly</p></div></div>
                 </div>
                 <div class="bento-card p-10">
-                    <p class="text-lg leading-relaxed text-slate-200">"The animations are buttery smooth. He truly
-                        understands the 'UX' in mobile development."</p>
-                    <div class="mt-10 flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-zinc-800"></div>
-                        <div>
-                            <p class="font-bold">Sarah Drasner</p>
-                            <p class="text-xs text-muted">Startup Founder</p>
-                        </div>
-                    </div>
+                    <p class="text-lg leading-relaxed text-slate-200">"The animations are buttery smooth. He truly understands the 'UX' in mobile development."</p>
+                    <div class="mt-10 flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-zinc-800"></div><div><p class="font-bold">Sarah Drasner</p><p class="text-xs" style="color:var(--muted)">Startup Founder</p></div></div>
                 </div>
                 <div class="bento-card p-10">
-                    <p class="text-lg leading-relaxed text-slate-200">"Reliable, communicative, and technically
-                        brilliant. Nanday is our go-to for all things mobile."</p>
-                    <div class="mt-10 flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-zinc-800"></div>
-                        <div>
-                            <p class="font-bold">Kevin Grant</p>
-                            <p class="text-xs text-muted">CTO, Modus</p>
-                        </div>
-                    </div>
+                    <p class="text-lg leading-relaxed text-slate-200">"Reliable, communicative, and technically brilliant. Nanday is our go-to for all things mobile."</p>
+                    <div class="mt-10 flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-zinc-800"></div><div><p class="font-bold">Kevin Grant</p><p class="text-xs" style="color:var(--muted)">CTO, Modus</p></div></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ -->
     <section class="py-24 px-6 bg-zinc-950/50">
         <div class="max-w-3xl mx-auto">
             <h2 class="text-4xl font-outfit font-bold mb-16">Mobile Insights</h2>
@@ -510,28 +191,16 @@
                 <div class="faq-item">
                     <button class="faq-btn" onclick="toggleFaq(this)">
                         <span class="font-bold text-xl">Why choose Flutter for your project?</span>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" class="transition-transform duration-500">
-                            <path d="M12 5v14M5 12h14" />
-                        </svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform duration-500"><path d="M12 5v14M5 12h14"/></svg>
                     </button>
-                    <div class="faq-content">
-                        Flutter allows for a single codebase to serve both iOS and Android with native performance. It
-                        significantly reduces development costs and maintenance time while ensuring UI consistency.
-                    </div>
+                    <div class="faq-content">Flutter allows for a single codebase to serve both iOS and Android with native performance. It significantly reduces development costs and maintenance time while ensuring UI consistency.</div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-btn" onclick="toggleFaq(this)">
                         <span class="font-bold text-xl">What is your development process?</span>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" class="transition-transform duration-500">
-                            <path d="M12 5v14M5 12h14" />
-                        </svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform duration-500"><path d="M12 5v14M5 12h14"/></svg>
                     </button>
-                    <div class="faq-content">
-                        I follow an agile approach: Discovery & Wireframing -> Architecture Design -> Iterative Sprints
-                        -> QA Testing -> App Store Deployment.
-                    </div>
+                    <div class="faq-content">I follow an agile approach: Discovery & Wireframing → Architecture Design → Iterative Sprints → QA Testing → App Store Deployment.</div>
                 </div>
             </div>
         </div>
@@ -542,14 +211,11 @@
         <div class="max-w-6xl mx-auto text-center relative z-10">
             <p class="text-blue-400 font-bold uppercase tracking-widest text-sm mb-6">Let's build something epic</p>
             <h2 class="text-5xl md:text-8xl font-outfit font-extrabold mb-16 tracking-tighter leading-tight">
-                Ready to launch your <br> <span class="gradient-text">mobile presence?</span>
+                Ready to launch your <br><span class="gradient-text">mobile presence?</span>
             </h2>
             <div class="flex flex-wrap justify-center gap-6">
-                <a href="mailto:nandaydas@example.com"
-                    class="bg-white text-black px-12 py-6 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-2xl shadow-blue-500/20">Email
-                    Nanday</a>
-                <a href="#" class="pill flex items-center gap-3 px-12 py-6 !text-lg font-semibold border-white/20">Get a
-                    Quote</a>
+                <a href="mailto:nandaydas@example.com" class="bg-white text-black px-12 py-6 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-2xl shadow-blue-500/20">Email Nanday</a>
+                <a href="#" class="pill flex items-center gap-3 px-12 py-6 !text-lg font-semibold border-white/20">Get a Quote</a>
             </div>
         </div>
         <div class="blob absolute bottom-0 left-1/2 -translate-x-1/2 opacity-20"></div>
@@ -560,65 +226,165 @@
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
             <div class="text-center md:text-left">
                 <p class="font-outfit font-bold text-xl mb-2">NANDAY DAS</p>
-                <p class="text-muted text-sm font-light">Cross-Platform Mobile Engineer</p>
+                <p class="text-sm font-light" style="color:var(--muted)">Cross-Platform Mobile Engineer</p>
             </div>
-            <div class="flex gap-12 text-sm font-semibold tracking-widest uppercase text-muted">
+            <div class="flex gap-12 text-sm font-semibold tracking-widest uppercase" style="color:var(--muted)">
                 <a href="#" class="hover:text-blue-400 transition-colors">GitHub</a>
                 <a href="#" class="hover:text-blue-400 transition-colors">LinkedIn</a>
                 <a href="#" class="hover:text-blue-400 transition-colors">Medium</a>
             </div>
-            <p class="text-muted text-xs">© 2024 Nanday Das. All rights reserved.</p>
+            <p class="text-xs" style="color:var(--muted)">© 2025 Nanday Das. All rights reserved.</p>
         </div>
     </footer>
 
-    <script>
-        // Custom Cursor
-        const dot = document.getElementById('cursor-dot');
-        const outline = document.getElementById('cursor-outline');
+<script>
+// ── Config ───────────────────────────────────────────────────────────────────
+const SUPABASE_URL  = 'https://srprgtciqzxqzwaammvg.supabase.co';
+const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNycHJndGNpcXp4cXp3YWFtbXZnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg5MDM0MjIsImV4cCI6MjA5NDQ3OTQyMn0.oVd6pHepTUN8UDPK8GtTi4KiQCXmB4R3oJYuTER8tY8';
+const PLACEHOLDER   = 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2000&auto=format&fit=crop';
 
-        window.addEventListener('mousemove', (e) => {
-            dot.style.left = `${e.clientX}px`;
-            dot.style.top = `${e.clientY}px`;
+// ── Seed data (pre-fetched from DB — always works, even file://) ─────────────
+const SEED = [
+  { title:'AI Expense Tracker',        featured:true,  thumbnail_url:null, live_url:null, github_url:null, short_description:null, tech_stack:['Flutter','Dart','AI'] },
+  { title:'KhiladiLive – Fantasy Cricket', featured:true,  thumbnail_url:null, live_url:'https://khiladilive.in/', github_url:null, short_description:null, tech_stack:['Flutter','Firebase'] },
+  { title:'Realtime Chat App',          featured:false, thumbnail_url:null, live_url:null, github_url:'https://github.com/nandaydas/chat_app', short_description:null, tech_stack:['Flutter','WebSocket'] },
+  { title:"99INN's Hotels",             featured:false, thumbnail_url:null, live_url:'https://play.google.com/store/apps/details?id=com.nintynineinns.hotels', github_url:null, short_description:null, tech_stack:['Flutter','REST API'] },
+];
 
-            // Outline follow
-            outline.style.left = `${e.clientX - 17}px`;
-            outline.style.top = `${e.clientY - 17}px`;
-        });
+// Per-project hero images (swap these out for real screenshots)
+const FALLBACK_IMGS = [
+  'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2000&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1000&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1000&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2000&auto=format&fit=crop',
+];
 
-        // FAQ Interaction
-        function toggleFaq(btn) {
-            const item = btn.parentElement;
-            const isActive = item.classList.contains('active');
+// ── Fetch live data, fall back to seed ──────────────────────────────────────
+async function getProjects() {
+  try {
+    const r = await fetch(
+      SUPABASE_URL + '/rest/v1/projects?select=title,short_description,tech_stack,thumbnail_url,featured,live_url,github_url&order=featured.desc,created_at.desc',
+      { headers:{ apikey:SUPABASE_ANON, Authorization:'Bearer ' + SUPABASE_ANON } }
+    );
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const d = await r.json();
+    return (Array.isArray(d) && d.length) ? d : SEED;
+  } catch(e) {
+    console.warn('Live fetch failed, using seed:', e.message);
+    return SEED;
+  }
+}
 
-            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-            if (!isActive) item.classList.add('active');
-        }
+// ── Grid layout patterns ─────────────────────────────────────────────────────
+const PATTERNS = [
+  [{ cols:8, size:'large' }, { cols:4, size:'medium' }],
+  [{ cols:5, size:'small' }, { cols:7, size:'small'  }],
+];
 
-        // Hover Effect for Cursor
-        document.querySelectorAll('a, button, .bento-card').forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                outline.style.transform = 'scale(1.8)';
-                outline.style.background = 'rgba(59, 130, 246, 0.15)';
-                outline.style.borderColor = 'rgba(59, 130, 246, 0.8)';
-            });
-            el.addEventListener('mouseleave', () => {
-                outline.style.transform = 'scale(1)';
-                outline.style.background = 'transparent';
-                outline.style.borderColor = 'rgba(59, 130, 246, 0.5)';
-            });
-        });
+// ── Build one card ────────────────────────────────────────────────────────────
+function card(project, size, idx) {
+  const img   = project.thumbnail_url || FALLBACK_IMGS[idx % FALLBACK_IMGS.length];
+  const title = project.title || 'Untitled';
+  const desc  = project.short_description || '';
+  const tags  = (project.tech_stack || []).slice(0, 3);
+  const href  = project.live_url || project.github_url || '#';
+  const target = href !== '#' ? 'target="_blank" rel="noopener"' : '';
 
-        // Reveal Animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('reveal');
-                }
-            });
-        }, { threshold: 0.1 });
+  const pills = tags.map(t => '<span class="tech-pill">' + t + '</span>').join('');
+  const extSvg = '<svg class="ext-icon w-5 h-5 text-blue-400 absolute top-8 right-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>';
 
-        document.querySelectorAll('section > div').forEach(el => observer.observe(el));
-    </script>
+  const h      = (size === 'large' || size === 'medium') ? 'h-[550px]' : 'h-[450px]';
+  const cols   = size === 'large' ? 8 : size === 'medium' ? 4 : (idx % 2 === 0 ? 5 : 7);
+
+  let inner = '';
+  if (size === 'large') {
+    inner = '<a href="' + href + '" ' + target + ' class="project-link" aria-label="' + title + '"></a>'
+          + '<img src="' + img + '" class="w-full h-full object-cover image-reveal" alt="' + title + '" onerror="this.src=\'' + PLACEHOLDER + '\'">'
+          + extSvg
+          + '<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">'
+          + '<div class="flex flex-wrap gap-2 mb-4">' + pills + '</div>'
+          + '<h3 class="text-4xl font-bold font-outfit">' + title + '</h3>'
+          + (desc ? '<p class="mt-2 max-w-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500" style="color:var(--muted)">' + desc + '</p>' : '')
+          + '</div>';
+  } else {
+    const pad = size === 'medium' ? 'p-10' : 'p-8';
+    const h3size = size === 'medium' ? 'text-4xl' : 'text-2xl';
+    inner = '<a href="' + href + '" ' + target + ' class="project-link" aria-label="' + title + '"></a>'
+          + '<img src="' + img + '" class="w-full h-full object-cover image-reveal" alt="' + title + '" onerror="this.src=\'' + PLACEHOLDER + '\'">'
+          + extSvg
+          + '<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent ' + pad + ' flex flex-col justify-end">'
+          + '<div class="flex flex-wrap gap-2 mb-3">' + pills + '</div>'
+          + '<h3 class="' + h3size + ' font-bold font-outfit">' + title + '</h3>'
+          + '</div>';
+  }
+  return { cols, h, inner };
+}
+
+// ── Render grid ──────────────────────────────────────────────────────────────
+async function render() {
+  const grid = document.getElementById('projects-grid');
+  const projects = await getProjects();
+
+  let html = '';
+  let patRow = 0;
+  let i = 0;
+  let imgIdx = 0;
+
+  while (i < projects.length) {
+    const pattern = PATTERNS[patRow % PATTERNS.length];
+    patRow++;
+    for (const slot of pattern) {
+      if (i >= projects.length) break;
+      const p = projects[i++];
+      const c = card(p, slot.size, imgIdx++);
+      html += '<div class="md:col-span-' + c.cols + ' bento-card ' + c.h + ' group cursor-pointer">' + c.inner + '</div>';
+    }
+  }
+
+  grid.innerHTML = html;
+
+  // Re-bind cursor hover
+  grid.querySelectorAll('.bento-card').forEach(el => {
+    el.addEventListener('mouseenter', cursorEnter);
+    el.addEventListener('mouseleave', cursorLeave);
+  });
+}
+
+render();
+
+// ── Custom cursor ────────────────────────────────────────────────────────────
+const dot = document.getElementById('cursor-dot');
+const ring = document.getElementById('cursor-outline');
+
+window.addEventListener('mousemove', e => {
+  dot.style.left  = e.clientX + 'px';
+  dot.style.top   = e.clientY + 'px';
+  ring.style.left = e.clientX + 'px';
+  ring.style.top  = e.clientY + 'px';
+});
+
+function cursorEnter() { ring.style.transform='translate(-50%,-50%) scale(1.8)'; ring.style.background='rgba(59,130,246,0.15)'; ring.style.borderColor='rgba(59,130,246,0.8)'; }
+function cursorLeave() { ring.style.transform='translate(-50%,-50%) scale(1)'; ring.style.background='transparent'; ring.style.borderColor='rgba(59,130,246,0.5)'; }
+
+document.querySelectorAll('a,button,.bento-card').forEach(el => {
+  el.addEventListener('mouseenter', cursorEnter);
+  el.addEventListener('mouseleave', cursorLeave);
+});
+
+// ── FAQ ──────────────────────────────────────────────────────────────────────
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const was = item.classList.contains('active');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+  if (!was) item.classList.add('active');
+}
+
+// ── Scroll reveal ────────────────────────────────────────────────────────────
+new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('reveal'); });
+}, { threshold:0.1 }).observe && document.querySelectorAll('section > div').forEach(el =>
+  new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('reveal'); }); }, { threshold:0.1 }).observe(el)
+);
+</script>
 </body>
-
 </html>
