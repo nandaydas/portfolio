@@ -9,22 +9,23 @@
     <meta name="theme-color" content="#3b82f6" />
     <link rel="canonical" href="https://nandaydas.in" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #030303; --accent: #ffffff; --muted: #94a3b8;
-            --card-bg: rgba(15,15,25,0.6); --border: rgba(255,255,255,0.05);
+            --card-bg: rgba(15,15,25,0.4); --border: rgba(255,255,255,0.05);
             --primary-glow: rgba(59,130,246,0.15); --secondary-glow: rgba(6,182,212,0.12);
         }
         body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--accent); scroll-behavior:smooth; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
         h1,h2,h3,.font-outfit { font-family:'Outfit',sans-serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
         .glow-bg { position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; overflow:hidden; pointer-events:none; }
         .blob { position:absolute; width:600px; height:600px; background:radial-gradient(circle,var(--primary-glow) 0%,transparent 70%); border-radius:50%; filter:blur(80px); animation:move 20s infinite alternate; }
         .blob-2 { top:40%; right:-10%; background:radial-gradient(circle,var(--secondary-glow) 0%,transparent 70%); animation-duration:25s; }
         @keyframes move { from{transform:translate(0,0)} to{transform:translate(100px,100px)} }
         .noise { position:fixed; top:0; left:0; width:100%; height:100%; opacity:.02; z-index:9999; pointer-events:none; background:url('https://grainy-gradients.vercel.app/noise.svg'); }
-        .bento-card { background:var(--card-bg); backdrop-filter:blur(12px); border:1px solid var(--border); border-radius:28px; transition:all 0.5s cubic-bezier(0.23,1,0.32,1); position:relative; overflow:hidden; }
-        .bento-card:hover { border-color:rgba(59,130,246,0.3); background:rgba(10,15,30,0.8); transform:translateY(-6px); box-shadow:0 20px 40px rgba(0,0,0,0.4),0 0 20px rgba(59,130,246,0.05); }
+        .bento-card { background:var(--card-bg); backdrop-filter:blur(12px); border:1px solid var(--border); border-radius:16px; transition:all 0.4s cubic-bezier(0.23,1,0.32,1); position:relative; overflow:hidden; }
+        .bento-card:hover { border-color:rgba(59,130,246,0.2); background:rgba(10,15,30,0.6); transform:translateY(-4px); box-shadow:0 10px 30px rgba(0,0,0,0.4),0 0 15px rgba(59,130,246,0.05); }
         .nav-blur { backdrop-filter:blur(20px); background:rgba(3,3,3,0.7); border-bottom:1px solid var(--border); }
         .pill { background:rgba(255,255,255,0.03); border:1px solid var(--border); padding:6px 16px; border-radius:100px; font-size:0.75rem; color:var(--muted); transition:all 0.3s ease; display:inline-flex; align-items:center; gap:6px; }
         .pill:hover { background:rgba(59,130,246,0.1); border-color:rgba(59,130,246,0.4); color:white; }
@@ -37,15 +38,26 @@
         .faq-content { max-height:0; overflow:hidden; transition:all 0.4s cubic-bezier(0.4,0,0.2,1); color:var(--muted); font-size:0.95rem; }
         .faq-item.active .faq-content { max-height:200px; padding-bottom:24px; }
         .faq-item.active svg { transform:rotate(45deg); color:#3b82f6; }
-        .image-reveal { filter:saturate(0.2) brightness(0.8); transition:all 0.7s ease; }
-        .bento-card:hover .image-reveal { filter:saturate(1.1) brightness(1); transform:scale(1.05); }
         .gradient-text { background:linear-gradient(135deg,#fff 0%,#3b82f6 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
         @keyframes shimmer { 0%{background-position:-800px 0} 100%{background-position:800px 0} }
-        .skeleton { background:linear-gradient(90deg,rgba(255,255,255,0.04) 25%,rgba(255,255,255,0.09) 50%,rgba(255,255,255,0.04) 75%); background-size:800px 100%; animation:shimmer 1.5s infinite; border-radius:28px; }
-        .project-link { position:absolute; inset:0; z-index:10; }
-        .tech-pill { background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.2); color:#93c5fd; padding:3px 10px; border-radius:100px; font-size:0.65rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; }
-        .ext-icon { opacity:0; transition:opacity 0.3s ease; }
-        .bento-card:hover .ext-icon { opacity:1; }
+        .skeleton { background:linear-gradient(90deg,rgba(255,255,255,0.02) 25%,rgba(255,255,255,0.06) 50%,rgba(255,255,255,0.02) 75%); background-size:800px 100%; animation:shimmer 1.5s infinite; border-radius:16px; }
+        
+        /* New Clean Tech Pill Styles */
+        .tech-pill-clean {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: #d1d5db;
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            font-family: 'JetBrains Mono', monospace;
+            transition: all 0.3s ease;
+        }
+        .bento-card:hover .tech-pill-clean {
+            border-color: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.06);
+        }
     </style>
 </head>
 <body>
@@ -54,7 +66,6 @@
     <div id="cursor-dot" class="cursor-dot"></div>
     <div id="cursor-outline" class="cursor-outline"></div>
 
-    <!-- Nav -->
     <nav class="fixed top-0 w-full z-50 nav-blur">
         <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
             <a href="#" class="font-outfit font-bold text-2xl tracking-tighter">N<span class="text-blue-500">.</span>D</a>
@@ -68,7 +79,6 @@
         </div>
     </nav>
 
-    <!-- Hero -->
     <section class="min-h-screen flex flex-col justify-center px-6 pt-20">
         <div class="max-w-6xl mx-auto w-full">
             <div class="pill mb-8 reveal" style="animation-delay:0.2s">
@@ -97,31 +107,26 @@
         </div>
     </section>
 
-    <!-- Projects -->
-    <section id="work" class="py-24 px-6">
+    <section id="work" class="py-24 px-6 border-y border-white/5 bg-zinc-950/30">
         <div class="max-w-6xl mx-auto">
-            <div class="flex justify-between items-end mb-16">
-                <h2 class="text-4xl font-outfit font-bold">Selected Works</h2>
-                <div class="flex gap-2">
-                    <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                    <div class="w-2 h-2 rounded-full bg-zinc-800"></div>
-                    <div class="w-2 h-2 rounded-full bg-zinc-800"></div>
-                </div>
+            <div class="text-center mb-16 reveal">
+                <p class="text-cyan-400 font-mono text-sm tracking-widest uppercase mb-4">// PROJECTS</p>
+                <h2 class="text-5xl md:text-6xl font-outfit font-bold mb-4">What I've Built</h2>
+                <p class="text-lg" style="color:var(--muted)">A selection of mobile platforms and technical tools.</p>
             </div>
-            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-12 gap-6">
-                <div class="md:col-span-8 skeleton h-[550px]"></div>
-                <div class="md:col-span-4 skeleton h-[550px]"></div>
-                <div class="md:col-span-5 skeleton h-[450px]"></div>
-                <div class="md:col-span-7 skeleton h-[450px]"></div>
+            
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="skeleton h-64"></div>
+                <div class="skeleton h-64"></div>
+                <div class="skeleton h-64"></div>
             </div>
         </div>
     </section>
 
-    <!-- About -->
     <section id="about" class="py-24 px-6 relative">
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-                <div class="md:col-span-7 bento-card p-10 md:p-14 flex flex-col justify-between">
+                <div class="md:col-span-7 bento-card p-10 md:p-14 flex flex-col justify-between !border-white/5 !rounded-3xl">
                     <div>
                         <p class="text-blue-400 font-bold uppercase tracking-widest text-xs mb-6">The Developer</p>
                         <h2 class="text-3xl md:text-5xl font-outfit font-bold leading-tight mb-8">One codebase, <span class="text-blue-400">limitless</span> possibilities.</h2>
@@ -137,7 +142,7 @@
                     </div>
                 </div>
                 <div class="md:col-span-5 flex flex-col gap-6">
-                    <div class="bento-card p-10 flex-grow bg-blue-500/5">
+                    <div class="bento-card p-10 flex-grow bg-blue-500/5 !border-white/5 !rounded-3xl">
                         <p class="text-blue-400 font-bold uppercase tracking-widest text-xs mb-6">Capabilities</p>
                         <div class="flex flex-wrap gap-3">
                             <span class="pill !bg-white/5">Flutter Dev</span>
@@ -148,7 +153,7 @@
                             <span class="pill !bg-white/5">CI/CD Pipelines</span>
                         </div>
                     </div>
-                    <div class="bento-card p-10 bg-zinc-900/50">
+                    <div class="bento-card p-10 bg-zinc-900/50 !border-white/5 !rounded-3xl">
                         <p class="text-blue-400 font-bold uppercase tracking-widest text-xs mb-6">Ecosystem</p>
                         <div class="grid grid-cols-2 gap-4">
                             <div class="flex items-center gap-2 text-sm"><div class="w-2 h-2 rounded-full bg-blue-400"></div><span class="font-medium">Flutter / Dart</span></div>
@@ -162,20 +167,19 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
     <section id="testimonials" class="py-24 px-6 relative overflow-hidden">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl font-outfit font-bold mb-16 text-center">Client feedback</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bento-card p-10 border-t-2 border-t-blue-500/20">
+                <div class="bento-card p-10 border-t-2 border-t-blue-500/20 !rounded-3xl">
                     <p class="text-lg leading-relaxed text-slate-200">"Nanday's mastery of Flutter is evident. He delivered a complex fintech app in half the time we expected."</p>
                     <div class="mt-10 flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-zinc-800"></div><div><p class="font-bold">Rahul Mehta</p><p class="text-xs" style="color:var(--muted)">Product Head, Finly</p></div></div>
                 </div>
-                <div class="bento-card p-10">
+                <div class="bento-card p-10 !rounded-3xl">
                     <p class="text-lg leading-relaxed text-slate-200">"The animations are buttery smooth. He truly understands the 'UX' in mobile development."</p>
                     <div class="mt-10 flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-zinc-800"></div><div><p class="font-bold">Sarah Drasner</p><p class="text-xs" style="color:var(--muted)">Startup Founder</p></div></div>
                 </div>
-                <div class="bento-card p-10">
+                <div class="bento-card p-10 !rounded-3xl">
                     <p class="text-lg leading-relaxed text-slate-200">"Reliable, communicative, and technically brilliant. Nanday is our go-to for all things mobile."</p>
                     <div class="mt-10 flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-zinc-800"></div><div><p class="font-bold">Kevin Grant</p><p class="text-xs" style="color:var(--muted)">CTO, Modus</p></div></div>
                 </div>
@@ -183,8 +187,7 @@
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="py-24 px-6 bg-zinc-950/50">
+    <section class="py-24 px-6 bg-zinc-950/50 border-y border-white/5">
         <div class="max-w-3xl mx-auto">
             <h2 class="text-4xl font-outfit font-bold mb-16">Mobile Insights</h2>
             <div class="space-y-2">
@@ -206,7 +209,6 @@
         </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact" class="py-48 px-6 relative">
         <div class="max-w-6xl mx-auto text-center relative z-10">
             <p class="text-blue-400 font-bold uppercase tracking-widest text-sm mb-6">Let's build something epic</p>
@@ -221,7 +223,6 @@
         <div class="blob absolute bottom-0 left-1/2 -translate-x-1/2 opacity-20"></div>
     </section>
 
-    <!-- Footer -->
     <footer class="py-16 px-6 border-t border-white/5">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
             <div class="text-center md:text-left">
@@ -233,7 +234,7 @@
                 <a href="#" class="hover:text-blue-400 transition-colors">LinkedIn</a>
                 <a href="#" class="hover:text-blue-400 transition-colors">Medium</a>
             </div>
-            <p class="text-xs" style="color:var(--muted)">© 2025 Nanday Das. All rights reserved.</p>
+            <p class="text-xs" style="color:var(--muted)">© 2026 Nanday Das. All rights reserved.</p>
         </div>
     </footer>
 
@@ -241,109 +242,75 @@
 // ── Config ───────────────────────────────────────────────────────────────────
 const SUPABASE_URL  = 'https://srprgtciqzxqzwaammvg.supabase.co';
 const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNycHJndGNpcXp4cXp3YWFtbXZnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg5MDM0MjIsImV4cCI6MjA5NDQ3OTQyMn0.oVd6pHepTUN8UDPK8GtTi4KiQCXmB4R3oJYuTER8tY8';
-const PLACEHOLDER   = 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2000&auto=format&fit=crop';
 
-// ── Seed data (pre-fetched from DB — always works, even file://) ─────────────
+// ── Seed data (Updated to match your actual profile/projects) ────────────────
 const SEED = [
-  { title:'AI Expense Tracker',        featured:true,  thumbnail_url:null, live_url:null, github_url:null, short_description:null, tech_stack:['Flutter','Dart','AI'] },
-  { title:'KhiladiLive – Fantasy Cricket', featured:true,  thumbnail_url:null, live_url:'https://khiladilive.in/', github_url:null, short_description:null, tech_stack:['Flutter','Firebase'] },
-  { title:'Realtime Chat App',          featured:false, thumbnail_url:null, live_url:null, github_url:'https://github.com/nandaydas/chat_app', short_description:null, tech_stack:['Flutter','WebSocket'] },
-  { title:"99INN's Hotels",             featured:false, thumbnail_url:null, live_url:'https://play.google.com/store/apps/details?id=com.nintynineinns.hotels', github_url:null, short_description:null, tech_stack:['Flutter','REST API'] },
-];
-
-// Per-project hero images (swap these out for real screenshots)
-const FALLBACK_IMGS = [
-  'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2000&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1000&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1000&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2000&auto=format&fit=crop',
+  { title:'TalkEng', featured:true, live_url:'#', github_url:null, short_description:'An English-learning platform offering 1-on-1 coaching, personality development, and random voice calling for co-learners.', tech_stack:['Flutter','Dart','WebRTC'] },
+  { title:'Hero11 / KhiladiLive', featured:true, live_url:'https://khiladilive.in/', github_url:null, short_description:'A fantasy sports application featuring refined app UI/UX, seamless transitions, and real-time updates.', tech_stack:['Flutter','Firebase'] },
+  { title:'RentMate', featured:false, live_url:'#', github_url:null, short_description:'A decentralized and AI-powered renting solution app. Currently developing the landing experience and core app architecture.', tech_stack:['Flutter','Node.js'] },
+  { title:'Realtime P2P Chat', featured:false, live_url:null, github_url:'https://github.com/nandaydas/chat_app', short_description:'A peer-to-peer real-time communication application built with low-latency WebSockets and WebRTC.', tech_stack:['Flutter','WebSocket','Firebase'] },
+  { title:'Social Auto-Poster', featured:false, live_url:null, github_url:null, short_description:'Automated workflows for social media management and API integrations utilizing n8n and AI agents.', tech_stack:['n8n','Automation','API'] },
+  { title:"99INN's Hotels", featured:false, live_url:'https://play.google.com/store/apps/details?id=com.nintynineinns.hotels', github_url:null, short_description:'A mobile hotel booking application integrated with dynamic pricing APIs and seamless payment gateways.', tech_stack:['Flutter','REST API'] },
 ];
 
 // ── Fetch live data, fall back to seed ──────────────────────────────────────
 async function getProjects() {
   try {
     const r = await fetch(
-      SUPABASE_URL + '/rest/v1/projects?select=title,short_description,tech_stack,thumbnail_url,featured,live_url,github_url&order=featured.desc,created_at.desc',
+      SUPABASE_URL + '/rest/v1/projects?select=title,short_description,tech_stack,live_url,github_url&order=featured.desc,created_at.desc',
       { headers:{ apikey:SUPABASE_ANON, Authorization:'Bearer ' + SUPABASE_ANON } }
     );
     if (!r.ok) throw new Error('HTTP ' + r.status);
     const d = await r.json();
     return (Array.isArray(d) && d.length) ? d : SEED;
   } catch(e) {
-    console.warn('Live fetch failed, using seed:', e.message);
+    console.warn('Live fetch failed, using seed fallback.');
     return SEED;
   }
 }
 
-// ── Grid layout patterns ─────────────────────────────────────────────────────
-const PATTERNS = [
-  [{ cols:8, size:'large' }, { cols:4, size:'medium' }],
-  [{ cols:5, size:'small' }, { cols:7, size:'small'  }],
-];
-
-// ── Build one card ────────────────────────────────────────────────────────────
-function card(project, size, idx) {
-  const img   = project.thumbnail_url || FALLBACK_IMGS[idx % FALLBACK_IMGS.length];
+// ── Build clean uniform card (matching reference) ────────────────────────────
+function buildCard(project) {
   const title = project.title || 'Untitled';
-  const desc  = project.short_description || '';
-  const tags  = (project.tech_stack || []).slice(0, 3);
+  const desc  = project.short_description || 'A cross-platform mobile application.';
+  const tags  = (project.tech_stack || []).slice(0, 4);
   const href  = project.live_url || project.github_url || '#';
   const target = href !== '#' ? 'target="_blank" rel="noopener"' : '';
 
-  const pills = tags.map(t => '<span class="tech-pill">' + t + '</span>').join('');
-  const extSvg = '<svg class="ext-icon w-5 h-5 text-blue-400 absolute top-8 right-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>';
+  const pills = tags.map(t => '<span class="tech-pill-clean">' + t + '</span>').join('');
+  
+  // Clean SVG Icon Placeholder (can be dynamic if needed)
+  const iconSvg = `<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>`;
 
-  const h      = (size === 'large' || size === 'medium') ? 'h-[550px]' : 'h-[450px]';
-  const cols   = size === 'large' ? 8 : size === 'medium' ? 4 : (idx % 2 === 0 ? 5 : 7);
-
-  let inner = '';
-  if (size === 'large') {
-    inner = '<a href="' + href + '" ' + target + ' class="project-link" aria-label="' + title + '"></a>'
-          + '<img src="' + img + '" class="w-full h-full object-cover image-reveal" alt="' + title + '" onerror="this.src=\'' + PLACEHOLDER + '\'">'
-          + extSvg
-          + '<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">'
-          + '<div class="flex flex-wrap gap-2 mb-4">' + pills + '</div>'
-          + '<h3 class="text-4xl font-bold font-outfit">' + title + '</h3>'
-          + (desc ? '<p class="mt-2 max-w-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500" style="color:var(--muted)">' + desc + '</p>' : '')
-          + '</div>';
-  } else {
-    const pad = size === 'medium' ? 'p-10' : 'p-8';
-    const h3size = size === 'medium' ? 'text-4xl' : 'text-2xl';
-    inner = '<a href="' + href + '" ' + target + ' class="project-link" aria-label="' + title + '"></a>'
-          + '<img src="' + img + '" class="w-full h-full object-cover image-reveal" alt="' + title + '" onerror="this.src=\'' + PLACEHOLDER + '\'">'
-          + extSvg
-          + '<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent ' + pad + ' flex flex-col justify-end">'
-          + '<div class="flex flex-wrap gap-2 mb-3">' + pills + '</div>'
-          + '<h3 class="' + h3size + ' font-bold font-outfit">' + title + '</h3>'
-          + '</div>';
-  }
-  return { cols, h, inner };
+  return `
+    <a href="${href}" ${target} class="bento-card p-8 flex flex-col h-full group" style="text-decoration:none;">
+       <div class="flex items-center gap-4 mb-6">
+           <div class="w-10 h-10 rounded-lg bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400">
+               ${iconSvg}
+           </div>
+           <h3 class="text-xl font-bold font-outfit text-white tracking-wide">${title}</h3>
+       </div>
+       <p class="text-[0.95rem] leading-relaxed mb-8 flex-grow" style="color:var(--muted)">${desc}</p>
+       <div class="flex flex-wrap gap-2">
+           ${pills}
+       </div>
+    </a>
+  `;
 }
 
 // ── Render grid ──────────────────────────────────────────────────────────────
 async function render() {
   const grid = document.getElementById('projects-grid');
   const projects = await getProjects();
-
   let html = '';
-  let patRow = 0;
-  let i = 0;
-  let imgIdx = 0;
-
-  while (i < projects.length) {
-    const pattern = PATTERNS[patRow % PATTERNS.length];
-    patRow++;
-    for (const slot of pattern) {
-      if (i >= projects.length) break;
-      const p = projects[i++];
-      const c = card(p, slot.size, imgIdx++);
-      html += '<div class="md:col-span-' + c.cols + ' bento-card ' + c.h + ' group cursor-pointer">' + c.inner + '</div>';
-    }
+  
+  for (const p of projects) {
+     html += buildCard(p);
   }
-
+  
   grid.innerHTML = html;
 
-  // Re-bind cursor hover
+  // Re-bind cursor hover to new elements
   grid.querySelectorAll('.bento-card').forEach(el => {
     el.addEventListener('mouseenter', cursorEnter);
     el.addEventListener('mouseleave', cursorLeave);
