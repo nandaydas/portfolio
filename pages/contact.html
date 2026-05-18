@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8TYSZYMPW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Y8TYSZYMPW');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me | Nanday Das</title>
+    <link rel="icon" type="image/jpeg" href="../assets/icon.jpg">
+    <meta name="description"
+        content="Get in touch with Nanday Das. I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions." />
+    <meta name="author" content="Nanday Das" />
+    <meta name="theme-color" content="#3b82f6" />
+    <link href="../assets/css/output.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="noise"></div>
+    <div class="glow-bg">
+        <div class="blob"></div>
+        <div class="blob blob-2"></div>
+    </div>
+    <div id="cursor-dot" class="cursor-dot"></div>
+    <div id="cursor-outline" class="cursor-outline"></div>
+
+    <nav class="fixed top-0 w-full z-50 nav-blur">
+        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="../index.html" class="font-outfit font-bold text-2xl tracking-tighter">N<span
+                    class="text-blue-500">.</span>D</a>
+            <div class="hidden md:flex gap-10 text-xs font-semibold uppercase tracking-widest"
+                style="color:var(--muted)">
+                <a href="../index.html#work" class="hover:text-white transition-colors">Work</a>
+                <a href="../index.html#about" class="hover:text-white transition-colors">About</a>
+                <a href="../index.html#testimonials" class="hover:text-white transition-colors">Vibe</a>
+                <a href="../index.html#contact" class="hover:text-white transition-colors">Contact</a>
+            </div>
+            <a href="mailto:nandaydas@example.com"
+                class="pill !text-white !bg-blue-600/20 border-blue-500/20 hover:!bg-blue-600 hover:!border-blue-500 px-6 py-2 font-bold uppercase tracking-wider text-[10px]">Hire
+                Me</a>
+        </div>
+    </nav>
+
+    <section class="min-h-screen pt-32 pb-16 px-6 relative flex items-center">
+        <div class="max-w-5xl mx-auto w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Contact Info Side -->
+                <div class="reveal">
+                    <p class="text-blue-400 font-mono text-sm tracking-widest uppercase mb-4">// GET IN TOUCH</p>
+                    <h1 class="text-5xl md:text-7xl font-outfit font-extrabold mb-6 tracking-tight">
+                        Let's start a <br><span class="gradient-text">conversation.</span>
+                    </h1>
+                    <p class="text-lg leading-relaxed mb-10 font-light" style="color:var(--muted)">
+                        I'm always open to discussing new projects, creative ideas or opportunities to be part of your
+                        visions. Feel free to reach out using the form or through my direct contact details.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm font-semibold tracking-wider uppercase text-white">Email</p>
+                                <a href="mailto:contact@nandaydas.in"
+                                    class="text-slate-400 hover:text-blue-400 transition-colors">contact@nandaydas.in</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm font-semibold tracking-wider uppercase text-white">Location</p>
+                                <p class="text-slate-400">Tripura, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Side -->
+                <div class="bento-card p-8 md:p-10 !rounded-3xl reveal" style="animation-delay: 0.2s">
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name"
+                                    class="block text-xs font-semibold uppercase tracking-wider text-white mb-2">Name</label>
+                                <input type="text" id="name" name="name"
+                                    class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors font-light placeholder:text-slate-500"
+                                    placeholder="John Doe" required>
+                            </div>
+                            <div>
+                                <label for="email"
+                                    class="block text-xs font-semibold uppercase tracking-wider text-white mb-2">Email</label>
+                                <input type="email" id="email" name="email"
+                                    class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors font-light placeholder:text-slate-500"
+                                    placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject"
+                                class="block text-xs font-semibold uppercase tracking-wider text-white mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject"
+                                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors font-light placeholder:text-slate-500"
+                                placeholder="Project Inquiry" required>
+                        </div>
+                        <div>
+                            <label for="message"
+                                class="block text-xs font-semibold uppercase tracking-wider text-white mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5"
+                                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors resize-none font-light placeholder:text-slate-500"
+                                placeholder="Hello, I'd like to discuss..." required></textarea>
+                        </div>
+                        <button type="submit" id="submitBtn"
+                            class="w-full pill flex items-center justify-center gap-3 px-8 py-4 !text-sm font-bold border-blue-500/30 !bg-blue-600/20 hover:!bg-blue-600 hover:!border-blue-500 transition-all text-white !rounded-xl group">
+                            Send Message
+                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 px-6 border-t border-white/5 mt-auto">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="text-center md:text-left">
+                <p class="font-outfit font-bold text-xl mb-2">NANDAY DAS</p>
+                <p class="text-sm font-light" style="color:var(--muted)">Cross-Platform Mobile Engineer</p>
+            </div>
+            <div class="flex gap-12 text-sm font-semibold tracking-widest uppercase" style="color:var(--muted)">
+                <a href="https://github.com/nandaydas" target="_blank" rel="noopener"
+                    class="hover:text-blue-400 transition-colors">GitHub</a>
+                <a href="https://www.linkedin.com/in/nanday-das/" target="_blank" rel="noopener"
+                    class="hover:text-blue-400 transition-colors">LinkedIn</a>
+                <a href="mailto:contact@nandaydas.in" class="hover:text-blue-400 transition-colors">Email</a>
+            </div>
+            <div class="flex flex-col items-center md:items-end gap-2">
+                <p class="text-xs" style="color:var(--muted)">© 2026 Nanday Das. All rights reserved.</p>
+                <div class="flex gap-4 text-xs" style="color:var(--muted)">
+                    <a href="./privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="./terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Custom cursor
+        const dot = document.getElementById('cursor-dot');
+        const ring = document.getElementById('cursor-outline');
+
+        window.addEventListener('mousemove', e => {
+            dot.style.left = e.clientX + 'px';
+            dot.style.top = e.clientY + 'px';
+            ring.style.left = e.clientX + 'px';
+            ring.style.top = e.clientY + 'px';
+        });
+
+        function cursorEnter() { ring.style.transform = 'translate(-50%,-50%) scale(1.8)'; ring.style.background = 'rgba(59,130,246,0.15)'; ring.style.borderColor = 'rgba(59,130,246,0.8)'; }
+        function cursorLeave() { ring.style.transform = 'translate(-50%,-50%) scale(1)'; ring.style.background = 'transparent'; ring.style.borderColor = 'rgba(59,130,246,0.5)'; }
+
+        document.querySelectorAll('a,button,.pill,input,textarea').forEach(el => {
+            el.addEventListener('mouseenter', cursorEnter);
+            el.addEventListener('mouseleave', cursorLeave);
+        });
+
+        // Scroll reveal
+        new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('reveal'); });
+        }, { threshold: 0.1 }).observe && document.querySelectorAll('.reveal').forEach(el =>
+            new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('reveal'); }); }, { threshold: 0.1 }).observe(el)
+        );
+        // Form Submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            const SUPABASE_URL = 'https://srprgtciqzxqzwaammvg.supabase.co';
+            const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNycHJndGNpcXp4cXp3YWFtbXZnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg5MDM0MjIsImV4cCI6MjA5NDQ3OTQyMn0.oVd6pHepTUN8UDPK8GtTi4KiQCXmB4R3oJYuTER8tY8';
+
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const btn = document.getElementById('submitBtn');
+                const originalText = btn.innerHTML;
+
+                btn.innerHTML = 'Sending... <svg class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>';
+                btn.disabled = true;
+
+                const data = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                };
+
+                try {
+                    const response = await fetch(`${SUPABASE_URL}/rest/v1/contact_form`, {
+                        method: 'POST',
+                        headers: {
+                            'apikey': SUPABASE_ANON,
+                            'Authorization': `Bearer ${SUPABASE_ANON}`,
+                            'Content-Type': 'application/json',
+                            'Prefer': 'return=minimal'
+                        },
+                        body: JSON.stringify(data)
+                    });
+
+                    if (!response.ok) throw new Error('Submission failed');
+
+                    btn.classList.remove('!bg-blue-600/20', 'border-blue-500/30', 'hover:!bg-blue-600', 'hover:!border-blue-500');
+                    btn.classList.add('!bg-green-500/20', 'border-green-500/30', 'hover:!bg-green-600', 'hover:!border-green-500');
+                    btn.innerHTML = 'Message Sent! <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
+
+                    contactForm.reset();
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('There was an error sending your message. Please try again later.');
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

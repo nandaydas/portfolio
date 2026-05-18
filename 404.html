@@ -1,216 +1,147 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth overflow-x-hidden">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 - Page Not Found | Nanday Das</title>
-    <meta
-      name="description"
-      content="Oops! The page you're looking for doesn't exist. Return to Nanday Das's portfolio homepage."
-    />
+<html lang="en">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8TYSZYMPW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-    <!-- Tailwind Config -->
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#3b82f6", // Blue-500
-              secondary: "#64748b", // Slate-500
-              dark: "#0f172a", // Slate-900
-              darker: "#020617", // Slate-950
-              card: "#1e293b", // Slate-800
-            },
-            fontFamily: {
-              sans: ["Inter", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
+    gtag('config', 'G-Y8TYSZYMPW');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found | Nanday Das</title>
+  <link rel="icon" type="image/jpeg" href="./assets/icon.jpg">
+  <meta name="description"
+    content="Oops! The page you're looking for doesn't exist. Return to Nanday Das's portfolio homepage." />
+  <meta name="author" content="Nanday Das" />
+  <meta name="theme-color" content="#3b82f6" />
+  <link href="./assets/css/output.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+</head>
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Icons (FontAwesome for brand icons) -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #0f172a; /* Tailwind slate-900 */
-        color: #f8fafc; /* Tailwind slate-50 */
-      }
-
-      /* Prevent horizontal overflow on mobile */
-      html,
-      body {
-        overflow-x: hidden;
-        max-width: 100vw;
-      }
-
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 10px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #0f172a;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #334155;
-        border-radius: 5px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #475569;
-      }
-
-      .blob {
-        position: absolute;
-        filter: blur(80px);
-        z-index: -1;
-        opacity: 0.4;
-        animation: move 10s infinite alternate;
-      }
-      @keyframes move {
-        from {
-          transform: translate(0, 0) scale(1);
-        }
-        to {
-          transform: translate(20px, -20px) scale(1.1);
-        }
-      }
-
-      .floating {
-        animation: float 3s ease-in-out infinite;
-      }
-      @keyframes float {
-        0%, 100% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
-      }
-
-      .glitch {
-        animation: glitch 2s infinite;
-      }
-      @keyframes glitch {
-        0%, 90%, 100% {
-          transform: translate(0);
-        }
-        10%, 30%, 50%, 70% {
-          transform: translate(-2px, 2px);
-        }
-        20%, 40%, 60%, 80% {
-          transform: translate(2px, -2px);
-        }
-      }
-    </style>
-  </head>
-  <body
-    class="antialiased relative overflow-x-hidden min-w-0 w-full max-w-full"
-  >
-    <!-- Decorative Blobs -->
-    <div
-      class="blob bg-blue-600 w-64 h-64 rounded-full top-0 left-0 -translate-x-1/2 -translate-y-1/2"
-    ></div>
-    <div
-      class="blob bg-purple-600 w-80 h-80 rounded-full bottom-0 right-0 translate-x-1/3 translate-y-1/3"
-    ></div>
-
-    <!-- Navigation -->
-<nav class="fixed top-0 w-full z-50 bg-dark/90 backdrop-blur border-b border-slate-800">
-  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-    <!-- Logo -->
-    <a href="index.html" class="text-xl font-bold text-white">
-      nandaydas<span class="text-primary">.in</span>
-    </a>
+<body>
+  <div class="noise"></div>
+  <div class="glow-bg">
+    <div class="blob"></div>
+    <div class="blob blob-2"></div>
   </div>
-</nav>
+  <div id="cursor-dot" class="cursor-dot"></div>
+  <div id="cursor-outline" class="cursor-outline"></div>
 
-    <!-- 404 Error Section -->
-    <section class="min-h-screen flex items-center justify-center pt-16">
-      <div class="container mx-auto px-4 sm:px-6 max-w-4xl text-center">
-        <!-- 404 Illustration -->
-        <div class="mb-12">
-          <div class="relative inline-block">
-            <!-- Large 404 Text -->
-            <h1 class="text-[12rem] sm:text-[16rem] md:text-[20rem] font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 leading-none glitch">
-              404
-            </h1>
-            <!-- Floating Elements -->
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <div class="floating">
-                <svg class="w-16 h-16 text-primary opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6 0a4 4 0 110-8h6a4 4 0 110 8m-6 0v4a4 4 0 110 8h6a4 4 0 110-8v-4"></path>
-                </svg>
-              </div>
-            </div>
+  <nav class="fixed top-0 w-full z-50 nav-blur">
+    <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+      <a href="index.html" class="font-outfit font-bold text-2xl tracking-tighter">N<span
+          class="text-blue-500">.</span>D</a>
+      <div class="hidden md:flex gap-10 text-xs font-semibold uppercase tracking-widest" style="color:var(--muted)">
+        <a href="index.html#work" class="hover:text-white transition-colors">Work</a>
+        <a href="index.html#about" class="hover:text-white transition-colors">About</a>
+        <a href="index.html#testimonials" class="hover:text-white transition-colors">Vibe</a>
+        <a href="index.html#contact" class="hover:text-white transition-colors">Contact</a>
+      </div>
+      <a href="mailto:nandaydas@example.com"
+        class="pill !text-white !bg-blue-600/20 border-blue-500/20 hover:!bg-blue-600 hover:!border-blue-500 px-6 py-2 font-bold uppercase tracking-wider text-[10px]">Hire
+        Me</a>
+    </div>
+  </nav>
+
+  <section class="min-h-screen flex flex-col justify-center px-6 pt-20">
+    <div class="max-w-6xl mx-auto w-full text-center">
+      <div class="relative inline-block mb-8 reveal" style="animation-delay:0.2s">
+        <h1
+          class="text-[10rem] md:text-[16rem] font-outfit font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 leading-none glitch">
+          404
+        </h1>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <div class="floating">
+            <svg class="w-16 h-16 text-blue-500 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6 0a4 4 0 110-8h6a4 4 0 110 8m-6 0v4a4 4 0 110 8h6a4 4 0 110-8v-4">
+              </path>
+            </svg>
           </div>
         </div>
-
-        <!-- Error Message -->
-        <div class="mb-8">
-          <span class="text-primary font-semibold tracking-wider uppercase mb-2 block">
-            Oops! Something went wrong
-          </span>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Page Not Found
-          </h2>
-          <p class="text-slate-400 text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
-            The page you're looking for doesn't exist. It might have been moved, deleted, or you entered the wrong URL. Let's get you back on track!
-          </p>
-        </div>
-
-        <!-- Action Buttons -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <a
-            href="/"
-            class="px-8 py-3.5 rounded-lg bg-primary text-white font-semibold hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2"
-          >
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-            </svg>
-            Back to Home
-          </a>
-        </div>
-
-    
       </div>
-    </section>
 
-    <!-- Footer -->
-  <footer class="border-t border-slate-800 py-6 text-center text-slate-400">
-    © 2026 Nanday Das. All rights reserved.
+      <div class="mb-12 reveal" style="animation-delay:0.4s">
+        <p class="text-cyan-400 font-mono text-sm tracking-widest uppercase mb-4">// ERROR</p>
+        <h2 class="text-4xl md:text-5xl font-outfit font-bold mb-6">Page Not Found</h2>
+        <p class="text-lg max-w-2xl mx-auto font-light" style="color:var(--muted)">
+          The page you're looking for doesn't exist. It might have been moved, deleted, or you entered the wrong URL.
+          Let's get you back on track!
+        </p>
+      </div>
+
+      <div class="flex justify-center reveal" style="animation-delay:0.6s">
+        <a href="index.html"
+          class="pill !text-white !bg-blue-600/20 border-blue-500/20 hover:!bg-blue-600 hover:!border-blue-500 px-8 py-4 font-bold uppercase tracking-wider text-sm flex items-center gap-3">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+            </path>
+          </svg>
+          Back to Home
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-16 px-6 border-t border-white/5">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+      <div class="text-center md:text-left">
+        <p class="font-outfit font-bold text-xl mb-2">NANDAY DAS</p>
+        <p class="text-sm font-light" style="color:var(--muted)">Cross-Platform Mobile Engineer</p>
+      </div>
+      <div class="flex gap-12 text-sm font-semibold tracking-widest uppercase" style="color:var(--muted)">
+        <a href="https://github.com/nandaydas" target="_blank" rel="noopener"
+          class="hover:text-blue-400 transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/in/nanday-das/" target="_blank" rel="noopener"
+          class="hover:text-blue-400 transition-colors">LinkedIn</a>
+        <a href="mailto:contact@nandaydas.in" class="hover:text-blue-400 transition-colors">Email</a>
+      </div>
+      <div class="flex flex-col items-center md:items-end gap-2">
+        <p class="text-xs" style="color:var(--muted)">© 2026 Nanday Das. All rights reserved.</p>
+        <div class="flex gap-4 text-xs" style="color:var(--muted)">
+          <a href="./pages/privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+          <span>|</span>
+          <a href="./pages/terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
-    <!-- JavaScript for Mobile Menu and Interactions -->
-    <script>
+  <script>
+    // Custom cursor
+    const dot = document.getElementById('cursor-dot');
+    const ring = document.getElementById('cursor-outline');
 
-      // Sticky Navbar background change on scroll
-      const navbar = document.querySelector("nav");
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 20) {
-          navbar.classList.add("shadow-lg");
-        } else {
-          navbar.classList.remove("shadow-lg");
-        }
-      });
+    window.addEventListener('mousemove', e => {
+      dot.style.left = e.clientX + 'px';
+      dot.style.top = e.clientY + 'px';
+      ring.style.left = e.clientX + 'px';
+      ring.style.top = e.clientY + 'px';
+    });
 
-      // Add some fun console message
-      console.log("🎯 404 Page - You found the secret developer console! 🎯");
-      console.log("💻 Portfolio by Nanday Das - nandaydas.in");
-    </script>
-  </body>
+    function cursorEnter() { ring.style.transform = 'translate(-50%,-50%) scale(1.8)'; ring.style.background = 'rgba(59,130,246,0.15)'; ring.style.borderColor = 'rgba(59,130,246,0.8)'; }
+    function cursorLeave() { ring.style.transform = 'translate(-50%,-50%) scale(1)'; ring.style.background = 'transparent'; ring.style.borderColor = 'rgba(59,130,246,0.5)'; }
+
+    document.querySelectorAll('a,button,.pill').forEach(el => {
+      el.addEventListener('mouseenter', cursorEnter);
+      el.addEventListener('mouseleave', cursorLeave);
+    });
+
+    // Scroll reveal
+    new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('reveal'); });
+    }, { threshold: 0.1 }).observe && document.querySelectorAll('.reveal').forEach(el =>
+      new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('reveal'); }); }, { threshold: 0.1 }).observe(el)
+    );
+  </script>
+</body>
+
 </html>

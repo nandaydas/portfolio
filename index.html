@@ -1,81 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8TYSZYMPW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Y8TYSZYMPW');
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nanday Das | Software Developer</title>
-    <meta name="description" content="Portfolio of Nanday Das, a Flutter specialist building cross-platform mobile experiences." />
+    <link rel="icon" type="image/jpeg" href="./assets/icon.jpg">
+    <meta name="description"
+        content="Portfolio of Nanday Das, a Flutter specialist building cross-platform mobile experiences." />
     <meta name="author" content="Nanday Das" />
     <meta name="theme-color" content="#3b82f6" />
     <link rel="canonical" href="https://nandaydas.in" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #030303; --accent: #ffffff; --muted: #94a3b8;
-            --card-bg: rgba(15,15,25,0.4); --border: rgba(255,255,255,0.05);
-            --primary-glow: rgba(59,130,246,0.15); --secondary-glow: rgba(6,182,212,0.12);
-        }
-        body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--accent); scroll-behavior:smooth; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
-        h1,h2,h3,.font-outfit { font-family:'Outfit',sans-serif; }
-        .font-mono { font-family: 'JetBrains Mono', monospace; }
-        .glow-bg { position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; overflow:hidden; pointer-events:none; }
-        .blob { position:absolute; width:600px; height:600px; background:radial-gradient(circle,var(--primary-glow) 0%,transparent 70%); border-radius:50%; filter:blur(80px); animation:move 20s infinite alternate; }
-        .blob-2 { top:40%; right:-10%; background:radial-gradient(circle,var(--secondary-glow) 0%,transparent 70%); animation-duration:25s; }
-        @keyframes move { from{transform:translate(0,0)} to{transform:translate(100px,100px)} }
-        .noise { position:fixed; top:0; left:0; width:100%; height:100%; opacity:.02; z-index:9999; pointer-events:none; background:url('https://grainy-gradients.vercel.app/noise.svg'); }
-        .bento-card { background:var(--card-bg); backdrop-filter:blur(12px); border:1px solid var(--border); border-radius:16px; transition:all 0.4s cubic-bezier(0.23,1,0.32,1); position:relative; overflow:hidden; }
-        .bento-card:hover { border-color:rgba(59,130,246,0.2); background:rgba(10,15,30,0.6); transform:translateY(-4px); box-shadow:0 10px 30px rgba(0,0,0,0.4),0 0 15px rgba(59,130,246,0.05); }
-        .nav-blur { backdrop-filter:blur(20px); background:rgba(3,3,3,0.7); border-bottom:1px solid var(--border); }
-        .pill { background:rgba(255,255,255,0.03); border:1px solid var(--border); padding:6px 16px; border-radius:100px; font-size:0.75rem; color:var(--muted); transition:all 0.3s ease; display:inline-flex; align-items:center; gap:6px; }
-        .pill:hover { background:rgba(59,130,246,0.1); border-color:rgba(59,130,246,0.4); color:white; }
-        .cursor-dot { width:6px; height:6px; background:white; border-radius:50%; position:fixed; pointer-events:none; z-index:10000; transform:translate(-50%,-50%); }
-        .cursor-outline { width:34px; height:34px; border:1px solid rgba(59,130,246,0.5); border-radius:50%; position:fixed; pointer-events:none; z-index:9999; transition:all 0.15s cubic-bezier(0.23,1,0.32,1); transform:translate(-50%,-50%); }
-        @keyframes reveal { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
-        .reveal { opacity:0; animation:reveal 1s forwards; }
-        .faq-btn { width:100%; text-align:left; padding:24px 0; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; transition:color 0.3s ease; }
-        .faq-btn:hover { color:#3b82f6; }
-        .faq-content { max-height:0; overflow:hidden; transition:all 0.4s cubic-bezier(0.4,0,0.2,1); color:var(--muted); font-size:0.95rem; }
-        .faq-item.active .faq-content { max-height:200px; padding-bottom:24px; }
-        .faq-item.active svg { transform:rotate(45deg); color:#3b82f6; }
-        .gradient-text { background:linear-gradient(135deg,#fff 0%,#3b82f6 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-        @keyframes shimmer { 0%{background-position:-800px 0} 100%{background-position:800px 0} }
-        .skeleton { background:linear-gradient(90deg,rgba(255,255,255,0.02) 25%,rgba(255,255,255,0.06) 50%,rgba(255,255,255,0.02) 75%); background-size:800px 100%; animation:shimmer 1.5s infinite; border-radius:16px; }
-        
-        /* New Clean Tech Pill Styles */
-        .tech-pill-clean {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            color: #d1d5db;
-            padding: 4px 12px;
-            border-radius: 100px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            font-family: 'JetBrains Mono', monospace;
-            transition: all 0.3s ease;
-        }
-        .bento-card:hover .tech-pill-clean {
-            border-color: rgba(255, 255, 255, 0.15);
-            background: rgba(255, 255, 255, 0.06);
-        }
-    </style>
+    <link href="./assets/css/output.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div class="noise"></div>
-    <div class="glow-bg"><div class="blob"></div><div class="blob blob-2"></div></div>
+    <div class="glow-bg">
+        <div class="blob"></div>
+        <div class="blob blob-2"></div>
+    </div>
     <div id="cursor-dot" class="cursor-dot"></div>
     <div id="cursor-outline" class="cursor-outline"></div>
 
     <nav class="fixed top-0 w-full z-50 nav-blur">
         <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-            <a href="#" class="font-outfit font-bold text-2xl tracking-tighter">N<span class="text-blue-500">.</span>D</a>
-            <div class="hidden md:flex gap-10 text-xs font-semibold uppercase tracking-widest" style="color:var(--muted)">
+            <a href="#" class="font-outfit font-bold text-2xl tracking-tighter">N<span
+                    class="text-blue-500">.</span>D</a>
+            <div class="hidden md:flex gap-10 text-xs font-semibold uppercase tracking-widest"
+                style="color:var(--muted)">
                 <a href="#work" class="hover:text-white transition-colors">Work</a>
                 <a href="#about" class="hover:text-white transition-colors">About</a>
                 <a href="#testimonials" class="hover:text-white transition-colors">Vibe</a>
-                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+                <a href="./pages/contact.html" class="hover:text-white transition-colors">Contact</a>
             </div>
-            <a href="mailto:nandaydas@example.com" class="pill !text-white !bg-blue-600/20 border-blue-500/20 hover:!bg-blue-600 hover:!border-blue-500 px-6 py-2 font-bold uppercase tracking-wider text-[10px]">Hire Me</a>
+            <a href="./pages/contact.html"
+                class="pill !text-white !bg-blue-600/20 border-blue-500/20 hover:!bg-blue-600 hover:!border-blue-500 px-6 py-2 font-bold uppercase tracking-wider text-[10px]">Hire
+                Me</a>
         </div>
     </nav>
 
@@ -85,12 +58,15 @@
                 <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
                 Crafting cross-platform magic
             </div>
-            <h1 class="text-6xl md:text-9xl font-outfit font-extrabold leading-[0.95] tracking-tight reveal" style="animation-delay:0.4s">
+            <h1 class="text-6xl md:text-9xl font-outfit font-extrabold leading-[0.95] tracking-tight reveal"
+                style="animation-delay:0.4s">
                 I build <span class="gradient-text">fluid</span> <br> mobile apps.
             </h1>
-            <div class="mt-16 flex flex-col md:flex-row items-start md:items-end justify-between gap-12 reveal" style="animation-delay:0.6s">
+            <div class="mt-16 flex flex-col md:flex-row items-start md:items-end justify-between gap-12 reveal"
+                style="animation-delay:0.6s">
                 <p class="max-w-md text-lg leading-relaxed font-light" style="color:var(--muted)">
-                    Hi, I'm <span class="text-white font-semibold">Nanday Das</span>. A Flutter specialist dedicated to building high-performance, beautiful mobile experiences that run natively on any screen.
+                    Hi, I'm <span class="text-white font-semibold">Nanday Das</span>. A Flutter specialist dedicated to
+                    building high-performance, beautiful mobile experiences that run natively on any screen.
                 </p>
                 <div class="flex items-center gap-6">
                     <div class="text-right">
@@ -114,7 +90,7 @@
                 <h2 class="text-5xl md:text-6xl font-outfit font-bold mb-4">What I've Built</h2>
                 <p class="text-lg" style="color:var(--muted)">A selection of mobile platforms and technical tools.</p>
             </div>
-            
+
             <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="skeleton h-64"></div>
                 <div class="skeleton h-64"></div>
@@ -126,19 +102,33 @@
     <section id="about" class="py-24 px-6 relative">
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-                <div class="md:col-span-7 bento-card p-10 md:p-14 flex flex-col justify-between !border-white/5 !rounded-3xl">
+                <div
+                    class="md:col-span-7 bento-card p-10 md:p-14 flex flex-col justify-between !border-white/5 !rounded-3xl">
                     <div>
                         <p class="text-blue-400 font-bold uppercase tracking-widest text-xs mb-6">The Developer</p>
-                        <h2 class="text-3xl md:text-5xl font-outfit font-bold leading-tight mb-8">One codebase, <span class="text-blue-400">limitless</span> possibilities.</h2>
+                        <h2 class="text-3xl md:text-5xl font-outfit font-bold leading-tight mb-8">One codebase, <span
+                                class="text-blue-400">limitless</span> possibilities.</h2>
                         <div class="space-y-6 leading-relaxed font-light text-lg" style="color:var(--muted)">
-                            <p>I'm <span class="text-white font-medium">Nanday Das</span>. My obsession with mobile tech began with the idea that everyone should have access to great design, regardless of their device.</p>
-                            <p>Specializing in <strong>Flutter</strong>, I build applications that bridge the gap between high-end native performance and efficient cross-platform development.</p>
+                            <p>I'm <span class="text-white font-medium">Nanday Das</span>. My obsession with mobile tech
+                                began with the idea that everyone should have access to great design, regardless of
+                                their device.</p>
+                            <p>Specializing in <strong>Flutter</strong>, I build applications that bridge the gap
+                                between high-end native performance and efficient cross-platform development.</p>
                         </div>
                     </div>
                     <div class="mt-12 flex gap-8">
-                        <div><p class="text-3xl font-bold font-outfit">Flutter</p><p class="text-xs uppercase tracking-widest" style="color:var(--muted)">Primary Stack</p></div>
-                        <div><p class="text-3xl font-bold font-outfit">25+</p><p class="text-xs uppercase tracking-widest" style="color:var(--muted)">Apps Shipped</p></div>
-                        <div><p class="text-3xl font-bold font-outfit">99%</p><p class="text-xs uppercase tracking-widest" style="color:var(--muted)">Crash-free rate</p></div>
+                        <div>
+                            <p class="text-3xl font-bold font-outfit">Flutter</p>
+                            <p class="text-xs uppercase tracking-widest" style="color:var(--muted)">Primary Stack</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold font-outfit">25+</p>
+                            <p class="text-xs uppercase tracking-widest" style="color:var(--muted)">Apps Shipped</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold font-outfit">99%</p>
+                            <p class="text-xs uppercase tracking-widest" style="color:var(--muted)">Crash-free rate</p>
+                        </div>
                     </div>
                 </div>
                 <div class="md:col-span-5 flex flex-col gap-6">
@@ -156,10 +146,22 @@
                     <div class="bento-card p-10 bg-zinc-900/50 !border-white/5 !rounded-3xl">
                         <p class="text-blue-400 font-bold uppercase tracking-widest text-xs mb-6">Ecosystem</p>
                         <div class="grid grid-cols-2 gap-4">
-                            <div class="flex items-center gap-2 text-sm"><div class="w-2 h-2 rounded-full bg-blue-400"></div><span class="font-medium">Flutter / Dart</span></div>
-                            <div class="flex items-center gap-2 text-sm"><div class="w-2 h-2 rounded-full bg-orange-500"></div><span class="font-medium">Firebase</span></div>
-                            <div class="flex items-center gap-2 text-sm"><div class="w-2 h-2 rounded-full bg-green-500"></div><span class="font-medium">Node.js</span></div>
-                            <div class="flex items-center gap-2 text-sm"><div class="w-2 h-2 rounded-full bg-blue-500"></div><span class="font-medium">REST / GraphQL</span></div>
+                            <div class="flex items-center gap-2 text-sm">
+                                <div class="w-2 h-2 rounded-full bg-blue-400"></div><span class="font-medium">Flutter /
+                                    Dart</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-sm">
+                                <div class="w-2 h-2 rounded-full bg-orange-500"></div><span
+                                    class="font-medium">Firebase</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-sm">
+                                <div class="w-2 h-2 rounded-full bg-green-500"></div><span
+                                    class="font-medium">Node.js</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-sm">
+                                <div class="w-2 h-2 rounded-full bg-blue-500"></div><span class="font-medium">REST /
+                                    GraphQL</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -170,19 +172,10 @@
     <section id="testimonials" class="py-24 px-6 relative overflow-hidden">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl font-outfit font-bold mb-16 text-center">Client feedback</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bento-card p-10 border-t-2 border-t-blue-500/20 !rounded-3xl">
-                    <p class="text-lg leading-relaxed text-slate-200">"Nanday's mastery of Flutter is evident. He delivered a complex fintech app in half the time we expected."</p>
-                    <div class="mt-10 flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-zinc-800"></div><div><p class="font-bold">Rahul Mehta</p><p class="text-xs" style="color:var(--muted)">Product Head, Finly</p></div></div>
-                </div>
-                <div class="bento-card p-10 !rounded-3xl">
-                    <p class="text-lg leading-relaxed text-slate-200">"The animations are buttery smooth. He truly understands the 'UX' in mobile development."</p>
-                    <div class="mt-10 flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-zinc-800"></div><div><p class="font-bold">Sarah Drasner</p><p class="text-xs" style="color:var(--muted)">Startup Founder</p></div></div>
-                </div>
-                <div class="bento-card p-10 !rounded-3xl">
-                    <p class="text-lg leading-relaxed text-slate-200">"Reliable, communicative, and technically brilliant. Nanday is our go-to for all things mobile."</p>
-                    <div class="mt-10 flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-zinc-800"></div><div><p class="font-bold">Kevin Grant</p><p class="text-xs" style="color:var(--muted)">CTO, Modus</p></div></div>
-                </div>
+            <div id="testimonials-grid" class="grid md:grid-cols-3 gap-8">
+                <div class="skeleton h-64"></div>
+                <div class="skeleton h-64"></div>
+                <div class="skeleton h-64"></div>
             </div>
         </div>
     </section>
@@ -194,16 +187,25 @@
                 <div class="faq-item">
                     <button class="faq-btn" onclick="toggleFaq(this)">
                         <span class="font-bold text-xl">Why choose Flutter for your project?</span>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform duration-500"><path d="M12 5v14M5 12h14"/></svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" class="transition-transform duration-500">
+                            <path d="M12 5v14M5 12h14" />
+                        </svg>
                     </button>
-                    <div class="faq-content">Flutter allows for a single codebase to serve both iOS and Android with native performance. It significantly reduces development costs and maintenance time while ensuring UI consistency.</div>
+                    <div class="faq-content">Flutter allows for a single codebase to serve both iOS and Android with
+                        native performance. It significantly reduces development costs and maintenance time while
+                        ensuring UI consistency.</div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-btn" onclick="toggleFaq(this)">
                         <span class="font-bold text-xl">What is your development process?</span>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform duration-500"><path d="M12 5v14M5 12h14"/></svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" class="transition-transform duration-500">
+                            <path d="M12 5v14M5 12h14" />
+                        </svg>
                     </button>
-                    <div class="faq-content">I follow an agile approach: Discovery & Wireframing → Architecture Design → Iterative Sprints → QA Testing → App Store Deployment.</div>
+                    <div class="faq-content">I follow an agile approach: Discovery & Wireframing Ã¢â€ â€™ Architecture
+                        Design Ã¢â€ â€™ Iterative Sprints Ã¢â€ â€™ QA Testing Ã¢â€ â€™ App Store Deployment.</div>
                 </div>
             </div>
         </div>
@@ -216,8 +218,12 @@
                 Ready to launch your <br><span class="gradient-text">mobile presence?</span>
             </h2>
             <div class="flex flex-wrap justify-center gap-6">
-                <a href="mailto:nandaydas@example.com" class="bg-white text-black px-12 py-6 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-2xl shadow-blue-500/20">Email Nanday</a>
-                <a href="#" class="pill flex items-center gap-3 px-12 py-6 !text-lg font-semibold border-white/20">Get a Quote</a>
+                <a href="./pages/contact.html"
+                    class="bg-white text-black px-12 py-6 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-2xl shadow-blue-500/20">Contact
+                    Me</a>
+                <a href="./pages/contact.html"
+                    class="pill flex items-center gap-3 px-12 py-6 !text-lg font-semibold border-white/20">Get a
+                    Quote</a>
             </div>
         </div>
         <div class="blob absolute bottom-0 left-1/2 -translate-x-1/2 opacity-20"></div>
@@ -230,128 +236,61 @@
                 <p class="text-sm font-light" style="color:var(--muted)">Cross-Platform Mobile Engineer</p>
             </div>
             <div class="flex gap-12 text-sm font-semibold tracking-widest uppercase" style="color:var(--muted)">
-                <a href="#" class="hover:text-blue-400 transition-colors">GitHub</a>
-                <a href="#" class="hover:text-blue-400 transition-colors">LinkedIn</a>
-                <a href="#" class="hover:text-blue-400 transition-colors">Medium</a>
+                <a href="https://github.com/nandaydas" target="_blank" rel="noopener"
+                    class="hover:text-blue-400 transition-colors">GitHub</a>
+                <a href="https://www.linkedin.com/in/nanday-das/" target="_blank" rel="noopener"
+                    class="hover:text-blue-400 transition-colors">LinkedIn</a>
+                <a href="mailto:contact@nandaydas.in" class="hover:text-blue-400 transition-colors">Email</a>
             </div>
-            <p class="text-xs" style="color:var(--muted)">© 2026 Nanday Das. All rights reserved.</p>
+            <div class="flex flex-col items-center md:items-end gap-2">
+                <p class="text-xs" style="color:var(--muted)">© 2026 Nanday Das. All rights reserved.</p>
+                <div class="flex gap-4 text-xs" style="color:var(--muted)">
+                    <a href="./pages/privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="./pages/terms-of-service.html" class="hover:text-white transition-colors">Terms of
+                        Service</a>
+                </div>
+            </div>
         </div>
     </footer>
 
-<script>
-// ── Config ───────────────────────────────────────────────────────────────────
-const SUPABASE_URL  = 'https://srprgtciqzxqzwaammvg.supabase.co';
-const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNycHJndGNpcXp4cXp3YWFtbXZnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg5MDM0MjIsImV4cCI6MjA5NDQ3OTQyMn0.oVd6pHepTUN8UDPK8GtTi4KiQCXmB4R3oJYuTER8tY8';
+    <script src="./assets/js/supabase-crud.js"></script>
+    <script>
 
-// ── Seed data (Updated to match your actual profile/projects) ────────────────
-const SEED = [
-  { title:'TalkEng', featured:true, live_url:'#', github_url:null, short_description:'An English-learning platform offering 1-on-1 coaching, personality development, and random voice calling for co-learners.', tech_stack:['Flutter','Dart','WebRTC'] },
-  { title:'Hero11 / KhiladiLive', featured:true, live_url:'https://khiladilive.in/', github_url:null, short_description:'A fantasy sports application featuring refined app UI/UX, seamless transitions, and real-time updates.', tech_stack:['Flutter','Firebase'] },
-  { title:'RentMate', featured:false, live_url:'#', github_url:null, short_description:'A decentralized and AI-powered renting solution app. Currently developing the landing experience and core app architecture.', tech_stack:['Flutter','Node.js'] },
-  { title:'Realtime P2P Chat', featured:false, live_url:null, github_url:'https://github.com/nandaydas/chat_app', short_description:'A peer-to-peer real-time communication application built with low-latency WebSockets and WebRTC.', tech_stack:['Flutter','WebSocket','Firebase'] },
-  { title:'Social Auto-Poster', featured:false, live_url:null, github_url:null, short_description:'Automated workflows for social media management and API integrations utilizing n8n and AI agents.', tech_stack:['n8n','Automation','API'] },
-  { title:"99INN's Hotels", featured:false, live_url:'https://play.google.com/store/apps/details?id=com.nintynineinns.hotels', github_url:null, short_description:'A mobile hotel booking application integrated with dynamic pricing APIs and seamless payment gateways.', tech_stack:['Flutter','REST API'] },
-];
+        // Custom cursor
+        const dot = document.getElementById('cursor-dot');
+        const ring = document.getElementById('cursor-outline');
 
-// ── Fetch live data, fall back to seed ──────────────────────────────────────
-async function getProjects() {
-  try {
-    const r = await fetch(
-      SUPABASE_URL + '/rest/v1/projects?select=title,short_description,tech_stack,live_url,github_url&order=featured.desc,created_at.desc',
-      { headers:{ apikey:SUPABASE_ANON, Authorization:'Bearer ' + SUPABASE_ANON } }
-    );
-    if (!r.ok) throw new Error('HTTP ' + r.status);
-    const d = await r.json();
-    return (Array.isArray(d) && d.length) ? d : SEED;
-  } catch(e) {
-    console.warn('Live fetch failed, using seed fallback.');
-    return SEED;
-  }
-}
+        window.addEventListener('mousemove', e => {
+            dot.style.left = e.clientX + 'px';
+            dot.style.top = e.clientY + 'px';
+            ring.style.left = e.clientX + 'px';
+            ring.style.top = e.clientY + 'px';
+        });
 
-// ── Build clean uniform card (matching reference) ────────────────────────────
-function buildCard(project) {
-  const title = project.title || 'Untitled';
-  const desc  = project.short_description || 'A cross-platform mobile application.';
-  const tags  = (project.tech_stack || []).slice(0, 4);
-  const href  = project.live_url || project.github_url || '#';
-  const target = href !== '#' ? 'target="_blank" rel="noopener"' : '';
+        function cursorEnter() { ring.style.transform = 'translate(-50%,-50%) scale(1.8)'; ring.style.background = 'rgba(59,130,246,0.15)'; ring.style.borderColor = 'rgba(59,130,246,0.8)'; }
+        function cursorLeave() { ring.style.transform = 'translate(-50%,-50%) scale(1)'; ring.style.background = 'transparent'; ring.style.borderColor = 'rgba(59,130,246,0.5)'; }
 
-  const pills = tags.map(t => '<span class="tech-pill-clean">' + t + '</span>').join('');
-  
-  // Clean SVG Icon Placeholder (can be dynamic if needed)
-  const iconSvg = `<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>`;
+        document.querySelectorAll('a,button,.bento-card').forEach(el => {
+            el.addEventListener('mouseenter', cursorEnter);
+            el.addEventListener('mouseleave', cursorLeave);
+        });
 
-  return `
-    <a href="${href}" ${target} class="bento-card p-8 flex flex-col h-full group" style="text-decoration:none;">
-       <div class="flex items-center gap-4 mb-6">
-           <div class="w-10 h-10 rounded-lg bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400">
-               ${iconSvg}
-           </div>
-           <h3 class="text-xl font-bold font-outfit text-white tracking-wide">${title}</h3>
-       </div>
-       <p class="text-[0.95rem] leading-relaxed mb-8 flex-grow" style="color:var(--muted)">${desc}</p>
-       <div class="flex flex-wrap gap-2">
-           ${pills}
-       </div>
-    </a>
-  `;
-}
+        // FAQ 
+        function toggleFaq(btn) {
+            const item = btn.parentElement;
+            const was = item.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+            if (!was) item.classList.add('active');
+        }
 
-// ── Render grid ──────────────────────────────────────────────────────────────
-async function render() {
-  const grid = document.getElementById('projects-grid');
-  const projects = await getProjects();
-  let html = '';
-  
-  for (const p of projects) {
-     html += buildCard(p);
-  }
-  
-  grid.innerHTML = html;
-
-  // Re-bind cursor hover to new elements
-  grid.querySelectorAll('.bento-card').forEach(el => {
-    el.addEventListener('mouseenter', cursorEnter);
-    el.addEventListener('mouseleave', cursorLeave);
-  });
-}
-
-render();
-
-// ── Custom cursor ────────────────────────────────────────────────────────────
-const dot = document.getElementById('cursor-dot');
-const ring = document.getElementById('cursor-outline');
-
-window.addEventListener('mousemove', e => {
-  dot.style.left  = e.clientX + 'px';
-  dot.style.top   = e.clientY + 'px';
-  ring.style.left = e.clientX + 'px';
-  ring.style.top  = e.clientY + 'px';
-});
-
-function cursorEnter() { ring.style.transform='translate(-50%,-50%) scale(1.8)'; ring.style.background='rgba(59,130,246,0.15)'; ring.style.borderColor='rgba(59,130,246,0.8)'; }
-function cursorLeave() { ring.style.transform='translate(-50%,-50%) scale(1)'; ring.style.background='transparent'; ring.style.borderColor='rgba(59,130,246,0.5)'; }
-
-document.querySelectorAll('a,button,.bento-card').forEach(el => {
-  el.addEventListener('mouseenter', cursorEnter);
-  el.addEventListener('mouseleave', cursorLeave);
-});
-
-// ── FAQ ──────────────────────────────────────────────────────────────────────
-function toggleFaq(btn) {
-  const item = btn.parentElement;
-  const was = item.classList.contains('active');
-  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-  if (!was) item.classList.add('active');
-}
-
-// ── Scroll reveal ────────────────────────────────────────────────────────────
-new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('reveal'); });
-}, { threshold:0.1 }).observe && document.querySelectorAll('section > div').forEach(el =>
-  new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('reveal'); }); }, { threshold:0.1 }).observe(el)
-);
-</script>
+        // Scroll reveal
+        new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('reveal'); });
+        }, { threshold: 0.1 }).observe && document.querySelectorAll('section > div').forEach(el =>
+            new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('reveal'); }); }, { threshold: 0.1 }).observe(el)
+        );
+    </script>
 </body>
+
 </html>

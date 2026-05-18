@@ -1,496 +1,338 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth overflow-x-hidden">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Terms of Service | Nanday Das</title>
-    <meta
-      name="description"
-      content="Terms of Service for Nanday Das Software Developer Portfolio - Learn about the terms and conditions for using our website."
-    />
+<html lang="en">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8TYSZYMPW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-    <!-- Tailwind Config -->
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#3b82f6", // Blue-500
-              secondary: "#64748b", // Slate-500
-              dark: "#0f172a", // Slate-900
-              darker: "#020617", // Slate-950
-              card: "#1e293b", // Slate-800
-            },
-            fontFamily: {
-              sans: ["Inter", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
+    gtag('config', 'G-Y8TYSZYMPW');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service | Nanday Das</title>
+  <link rel="icon" type="image/jpeg" href="../assets/icon.jpg">
+  <meta name="description"
+    content="Please read these terms and conditions carefully before using our website and services." />
+  <meta name="author" content="Nanday Das" />
+  <meta name="theme-color" content="#3b82f6" />
+  <link href="../assets/css/output.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+</head>
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+<body>
+  <div class="noise"></div>
+  <div class="glow-bg">
+    <div class="blob"></div>
+    <div class="blob blob-2"></div>
+  </div>
+  <div id="cursor-dot" class="cursor-dot"></div>
+  <div id="cursor-outline" class="cursor-outline"></div>
 
-    <!-- Icons (FontAwesome for brand icons) -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #0f172a; /* Tailwind slate-900 */
-        color: #f8fafc; /* Tailwind slate-50 */
-      }
-
-      /* Prevent horizontal overflow on mobile */
-      html,
-      body {
-        overflow-x: hidden;
-        max-width: 100vw;
-      }
-
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 10px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #0f172a;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #334155;
-        border-radius: 5px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #475569;
-      }
-
-      .blob {
-        position: absolute;
-        filter: blur(80px);
-        z-index: -1;
-        opacity: 0.4;
-        animation: move 10s infinite alternate;
-      }
-      @keyframes move {
-        from {
-          transform: translate(0, 0) scale(1);
-        }
-        to {
-          transform: translate(20px, -20px) scale(1.1);
-        }
-      }
-    </style>
-  </head>
-  <body
-    class="antialiased relative overflow-x-hidden min-w-0 w-full max-w-full"
-  >
-    <!-- Decorative Blobs -->
-    <div
-      class="blob bg-blue-600 w-64 h-64 rounded-full top-0 left-0 -translate-x-1/2 -translate-y-1/2"
-    ></div>
-    <div
-      class="blob bg-purple-600 w-80 h-80 rounded-full bottom-0 right-0 translate-x-1/3 translate-y-1/3"
-    ></div>
-
-    <!-- Navigation -->
-    <nav
-      class="fixed w-full z-50 top-0 start-0 border-b border-slate-800 bg-dark/80 backdrop-blur-md"
-    >
-      <div
-        class="max-w-7xl flex flex-wrap items-center justify-between mx-auto px-3 py-4 sm:px-4"
-      >
-        <a
-          href="../index.html"
-          class="flex items-center space-x-2 rtl:space-x-reverse flex-shrink-0"
-        >
-          <span
-            class="self-center text-lg sm:text-xl md:text-2xl font-bold text-white"
-            >nandaydas<span class="text-primary">.in</span></span
-          >
-        </a>
-        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <a
-            href="../index.html#contact"
-            class="hidden md:inline-block text-white bg-primary hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center transition-all"
-            >Hire Me</a
-          >
-          <button
-            data-collapse-toggle="navbar-sticky"
-            type="button"
-            id="menu-toggle"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600"
-            aria-controls="navbar-sticky"
-            aria-expanded="false"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-          id="navbar-sticky"
-        >
-          <ul
-            class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-700 rounded-lg bg-card md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent"
-          >
-            <li>
-              <a
-                href="../index.html#home"
-                class="block py-2 px-3 text-gray-300 rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-primary md:p-0 transition-colors"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="../index.html#about"
-                class="block py-2 px-3 text-gray-300 rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-primary md:p-0 transition-colors"
-                >About</a
-              >
-            </li>
-            <li>
-              <a
-                href="../index.html#skills"
-                class="block py-2 px-3 text-gray-300 rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-primary md:p-0 transition-colors"
-                >Skills</a
-              >
-            </li>
-            <li>
-              <a
-                href="../index.html#projects"
-                class="block py-2 px-3 text-gray-300 rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-primary md:p-0 transition-colors"
-                >Projects</a
-              >
-            </li>
-          </ul>
-        </div>
+  <nav class="fixed top-0 w-full z-50 nav-blur">
+    <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+      <a href="../index.html" class="font-outfit font-bold text-2xl tracking-tighter">N<span
+          class="text-blue-500">.</span>D</a>
+      <div class="hidden md:flex gap-10 text-xs font-semibold uppercase tracking-widest" style="color:var(--muted)">
+        <a href="../index.html#work" class="hover:text-white transition-colors">Work</a>
+        <a href="../index.html#about" class="hover:text-white transition-colors">About</a>
+        <a href="../index.html#testimonials" class="hover:text-white transition-colors">Vibe</a>
+        <a href="../index.html#contact" class="hover:text-white transition-colors">Contact</a>
       </div>
-    </nav>
-
-    <!-- Mobile Menu Overlay -->
-    <div
-      id="mobile-menu"
-      class="fixed inset-0 z-40 bg-darker bg-opacity-95 hidden flex flex-col items-center justify-center space-y-8 md:hidden transition-opacity duration-300"
-    >
-      <button
-        id="close-menu"
-        class="absolute top-6 right-6 text-gray-400 hover:text-white"
-      >
-        <svg
-          class="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M6 18L18 6M6 6l12 12"
-          ></path>
-        </svg>
-      </button>
-      <a
-        href="../index.html#home"
-        class="text-2xl font-bold text-white hover:text-primary mobile-link"
-        >Home</a
-      >
-      <a
-        href="../index.html#about"
-        class="text-2xl font-bold text-white hover:text-primary mobile-link"
-        >About</a
-      >
-      <a
-        href="../index.html#skills"
-        class="text-2xl font-bold text-white hover:text-primary mobile-link"
-        >Skills</a
-      >
-      <a
-        href="../index.html#projects"
-        class="text-2xl font-bold text-white hover:text-primary mobile-link"
-        >Projects</a
-      >
-      <a
-        href="../index.html#contact"
-        class="text-2xl font-bold text-white hover:text-primary mobile-link"
-        >Contact</a
-      >
+      <a href="mailto:nandaydas@example.com"
+        class="pill !text-white !bg-blue-600/20 border-blue-500/20 hover:!bg-blue-600 hover:!border-blue-500 px-6 py-2 font-bold uppercase tracking-wider text-[10px]">Hire
+        Me</a>
     </div>
+  </nav>
 
-    <!-- Main Content -->
-    <main class="pt-24 pb-16">
-      <div class="container mx-auto px-4 sm:px-6 max-w-4xl">
-        <!-- Page Header -->
-        <div class="text-center mb-16">
-          <span
-            class="text-primary font-semibold tracking-wider uppercase mb-2 block"
-            >Legal</span
-          >
-          <h1
-            class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
-          >
-            Terms of Service
-          </h1>
-          <p class="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
-            Please read these terms and conditions carefully before using our website and services.
+  <section class="min-h-screen pt-32 pb-16 px-6 relative">
+    <div class="max-w-4xl mx-auto">
+      <!-- Header -->
+      <div class="text-center mb-16 reveal">
+        <p class="text-blue-400 font-mono text-sm tracking-widest uppercase mb-4">// LEGAL</p>
+        <h1 class="text-5xl md:text-6xl font-outfit font-bold mb-6">Terms of Service</h1>
+        <p class="text-lg" style="color:var(--muted)">
+          Please read these terms and conditions carefully before using our website and services.
+        </p>
+      </div>
+
+      <div
+        class="bento-card p-8 md:p-14 !border-white/5 !rounded-3xl reveal text-lg font-light leading-relaxed legal-content"
+        style="color:var(--muted)">
+        <div class="mb-8">
+          <p>
+            <strong>Last updated:</strong> January 9, 2026
+          </p>
+          <p>
+            These Terms of Service ("Terms") govern your use of the website located at nandaydas.in (the "Service")
+            operated by Nanday Das ("us", "we", or "our"). By accessing or using our Service, you agree to be bound by
+            these Terms.
           </p>
         </div>
 
-        <!-- Terms of Service Content -->
-        <div class="bg-card/50 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-slate-800">
-          <div class="prose prose-lg prose-invert max-w-none">
-            <div class="mb-8">
-              <p class="text-slate-300 mb-4">
-                <strong>Last updated:</strong> January 9, 2026
-              </p>
-              <p class="text-slate-300 leading-relaxed">
-                These Terms of Service ("Terms") govern your use of the website located at nandaydas.in (the "Service") operated by Nanday Das ("us", "we", or "our"). By accessing or using our Service, you agree to be bound by these Terms.
-              </p>
+        <section class="mb-8">
+          <h2>
+
+            Acceptance of Terms
+          </h2>
+          <div>
+            <p>By accessing and using this website, you accept and agree to be bound by the terms and provision of this
+              agreement. Additionally, when using this website's particular services, you shall be subject to any posted
+              guidelines or rules applicable to such services.</p>
+          </div>
+        </section>
+
+        <section class="mb-8">
+          <h2>
+
+            Use License
+          </h2>
+          <div>
+            <p>Permission is granted to temporarily download one copy of the materials on this website for personal,
+              non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under
+              this license you may not:</p>
+            <ul>
+              <li>Modify or copy the materials</li>
+              <li>Use the materials for any commercial purpose or for any public display (commercial or non-commercial)
+              </li>
+              <li>Attempt to decompile or reverse engineer any software contained on the website</li>
+              <li>Remove any copyright or other proprietary notations from the materials</li>
+            </ul>
+            <p>This license shall automatically terminate if you violate any of these restrictions and may be terminated
+              by us at any time. Upon terminating your viewing of these materials or upon the termination of this
+              license, you must destroy any downloaded materials in your possession whether in electronic or printed
+              format.</p>
+          </div>
+        </section>
+
+        <section class="mb-8">
+          <h2>
+
+            Disclaimer
+          </h2>
+          <div>
+            <p>The materials on this website are provided on an 'as is' basis. We make no warranties, expressed or
+              implied, and hereby disclaim and negate all other warranties including without limitation, implied
+              warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of
+              intellectual property or other violation of rights.</p>
+            <p>Further, we do not warrant or make any representations concerning the accuracy, likely results, or
+              reliability of the use of the materials on its website or otherwise relating to such materials or on any
+              sites linked to this site.</p>
+          </div>
+        </section>
+
+        <section class="mb-8">
+          <h2>
+
+            Limitations
+          </h2>
+          <div>
+            <p>In no event shall Nanday Das or its suppliers be liable for any damages (including, without limitation,
+              damages for loss of data or profit, or due to business interruption) arising out of the use or inability
+              to use the materials on this website, even if we or our authorized representative has been notified orally
+              or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on
+              implied warranties, or limitations of liability for consequential or incidental damages, these limitations
+              may not apply to you.</p>
+          </div>
+        </section>
+
+        <section class="mb-8">
+          <h2>
+
+            Accuracy of Materials
+          </h2>
+          <div>
+            <p>The materials appearing on this website could include technical, typographical, or photographic errors.
+              We do not warrant that any of the materials on its website are accurate, complete, or current. We may make
+              changes to the materials contained on its website at any time without notice. However, we do not make any
+              commitment to update the materials.</p>
+          </div>
+        </section>
+
+        <section class="mb-8">
+          <h2>
+
+            Links
+          </h2>
+          <div>
+            <p>We have not reviewed all of the sites linked to our website and are not responsible for the contents of
+              any such linked site. The inclusion of any link does not imply endorsement by us of the site. Use of any
+              such linked website is at the user's own risk.</p>
+          </div>
+        </section>
+
+        <section class="mb-8">
+          <h2>
+
+            User Content and Conduct
+          </h2>
+          <div>
+            <p>When you submit content through our contact forms or other means, you agree that:</p>
+            <ul>
+              <li>You are responsible for your own content and the consequences of posting or publishing it</li>
+              <li>You will not submit content that is unlawful, defamatory, abusive, threatening, harmful, or otherwise
+                objectionable</li>
+              <li>You will not impersonate any person or entity or falsely state or otherwise misrepresent your
+                affiliation with anyone or anything</li>
+              <li>You will not submit content that infringes on the intellectual property rights of others</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="mb-8">
+          <h2>
+
+            Intellectual Property
+          </h2>
+          <div>
+            <p>The website and its original content, features, and functionality are owned by Nanday Das and are
+              protected by international copyright, trademark, patent, trade secret, and other intellectual property or
+              proprietary rights laws.</p>
+            <p>You may not use, reproduce, distribute, modify, create derivative works of, publicly display, publicly
+              perform, republish, or transmit any of the material obtained from this website without our prior written
+              consent.</p>
+          </div>
+        </section>
+
+        <section class="mb-8">
+          <h2>
+
+            Privacy Policy
+          </h2>
+          <div>
+            <p>Your privacy is important to us. Our Privacy Policy explains how we collect, use, and protect your
+              information when you use our Service. By using our Service, you agree to the collection and use of
+              information in accordance with our Privacy Policy.</p>
+            <p>Please review our Privacy Policy, which also governs your use of the Service, to understand our
+              practices.</p>
+          </div>
+        </section>
+
+        <section class="mb-8">
+          <h2>
+
+            Termination
+          </h2>
+          <div>
+            <p>We may terminate or suspend your access to our Service immediately, without prior notice or liability,
+              for any reason whatsoever, including without limitation if you breach the Terms.</p>
+            <p>Upon termination, your right to use the Service will cease immediately. If you wish to terminate your
+              account, you may simply discontinue using the Service.</p>
+          </div>
+        </section>
+
+        <section class="mb-8">
+          <h2>
+
+            Governing Law
+          </h2>
+          <div>
+            <p>These Terms shall be interpreted and governed by the laws of India, without regard to its conflict of law
+              provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver
+              of those rights.</p>
+          </div>
+        </section>
+
+        <section class="mb-8">
+          <h2>
+
+            Changes to Terms
+          </h2>
+          <div>
+            <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision
+              is material, we will try to provide at least 30 days' notice prior to any new terms taking effect. What
+              constitutes a material change will be determined at our sole discretion.</p>
+            <p>By continuing to access or use our Service after those revisions become effective, you agree to be bound
+              by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>
+          </div>
+        </section>
+
+        <section class="mb-8">
+          <h2>
+
+            Contact Information
+          </h2>
+          <div>
+            <p>If you have any questions about these Terms of Service, please contact us:</p>
+            <div class="contact-box">
+              <p><strong>Email:</strong> <a href="mailto:contact@nandaydas.in">contact@nandaydas.in</a></p>
+              <p><strong>Website:</strong> <a href="https://nandaydas.in">nandaydas.in</a></p>
             </div>
-
-            <section class="mb-8">
-              <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                <span class="w-2 h-8 bg-primary rounded-full"></span>
-                Acceptance of Terms
-              </h2>
-              <div class="text-slate-300 leading-relaxed space-y-4">
-                <p>By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement. Additionally, when using this website's particular services, you shall be subject to any posted guidelines or rules applicable to such services.</p>
-              </div>
-            </section>
-
-            <section class="mb-8">
-              <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                <span class="w-2 h-8 bg-primary rounded-full"></span>
-                Use License
-              </h2>
-              <div class="text-slate-300 leading-relaxed space-y-4">
-                <p>Permission is granted to temporarily download one copy of the materials on this website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
-                <ul class="list-disc pl-6 space-y-2 text-slate-400">
-                  <li>Modify or copy the materials</li>
-                  <li>Use the materials for any commercial purpose or for any public display (commercial or non-commercial)</li>
-                  <li>Attempt to decompile or reverse engineer any software contained on the website</li>
-                  <li>Remove any copyright or other proprietary notations from the materials</li>
-                </ul>
-                <p>This license shall automatically terminate if you violate any of these restrictions and may be terminated by us at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.</p>
-              </div>
-            </section>
-
-            <section class="mb-8">
-              <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                <span class="w-2 h-8 bg-primary rounded-full"></span>
-                Disclaimer
-              </h2>
-              <div class="text-slate-300 leading-relaxed space-y-4">
-                <p>The materials on this website are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
-                <p>Further, we do not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.</p>
-              </div>
-            </section>
-
-            <section class="mb-8">
-              <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                <span class="w-2 h-8 bg-primary rounded-full"></span>
-                Limitations
-              </h2>
-              <div class="text-slate-300 leading-relaxed space-y-4">
-                <p>In no event shall Nanday Das or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on this website, even if we or our authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.</p>
-              </div>
-            </section>
-
-            <section class="mb-8">
-              <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                <span class="w-2 h-8 bg-primary rounded-full"></span>
-                Accuracy of Materials
-              </h2>
-              <div class="text-slate-300 leading-relaxed space-y-4">
-                <p>The materials appearing on this website could include technical, typographical, or photographic errors. We do not warrant that any of the materials on its website are accurate, complete, or current. We may make changes to the materials contained on its website at any time without notice. However, we do not make any commitment to update the materials.</p>
-              </div>
-            </section>
-
-            <section class="mb-8">
-              <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                <span class="w-2 h-8 bg-primary rounded-full"></span>
-                Links
-              </h2>
-              <div class="text-slate-300 leading-relaxed space-y-4">
-                <p>We have not reviewed all of the sites linked to our website and are not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by us of the site. Use of any such linked website is at the user's own risk.</p>
-              </div>
-            </section>
-
-            <section class="mb-8">
-              <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                <span class="w-2 h-8 bg-primary rounded-full"></span>
-                User Content and Conduct
-              </h2>
-              <div class="text-slate-300 leading-relaxed space-y-4">
-                <p>When you submit content through our contact forms or other means, you agree that:</p>
-                <ul class="list-disc pl-6 space-y-2 text-slate-400">
-                  <li>You are responsible for your own content and the consequences of posting or publishing it</li>
-                  <li>You will not submit content that is unlawful, defamatory, abusive, threatening, harmful, or otherwise objectionable</li>
-                  <li>You will not impersonate any person or entity or falsely state or otherwise misrepresent your affiliation with anyone or anything</li>
-                  <li>You will not submit content that infringes on the intellectual property rights of others</li>
-                </ul>
-              </div>
-            </section>
-
-            <section class="mb-8">
-              <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                <span class="w-2 h-8 bg-primary rounded-full"></span>
-                Intellectual Property
-              </h2>
-              <div class="text-slate-300 leading-relaxed space-y-4">
-                <p>The website and its original content, features, and functionality are owned by Nanday Das and are protected by international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.</p>
-                <p>You may not use, reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, or transmit any of the material obtained from this website without our prior written consent.</p>
-              </div>
-            </section>
-
-            <section class="mb-8">
-              <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                <span class="w-2 h-8 bg-primary rounded-full"></span>
-                Privacy Policy
-              </h2>
-              <div class="text-slate-300 leading-relaxed space-y-4">
-                <p>Your privacy is important to us. Our Privacy Policy explains how we collect, use, and protect your information when you use our Service. By using our Service, you agree to the collection and use of information in accordance with our Privacy Policy.</p>
-                <p>Please review our Privacy Policy, which also governs your use of the Service, to understand our practices.</p>
-              </div>
-            </section>
-
-            <section class="mb-8">
-              <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                <span class="w-2 h-8 bg-primary rounded-full"></span>
-                Termination
-              </h2>
-              <div class="text-slate-300 leading-relaxed space-y-4">
-                <p>We may terminate or suspend your access to our Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
-                <p>Upon termination, your right to use the Service will cease immediately. If you wish to terminate your account, you may simply discontinue using the Service.</p>
-              </div>
-            </section>
-
-            <section class="mb-8">
-              <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                <span class="w-2 h-8 bg-primary rounded-full"></span>
-                Governing Law
-              </h2>
-              <div class="text-slate-300 leading-relaxed space-y-4">
-                <p>These Terms shall be interpreted and governed by the laws of India, without regard to its conflict of law provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.</p>
-              </div>
-            </section>
-
-            <section class="mb-8">
-              <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                <span class="w-2 h-8 bg-primary rounded-full"></span>
-                Changes to Terms
-              </h2>
-              <div class="text-slate-300 leading-relaxed space-y-4">
-                <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
-                <p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>
-              </div>
-            </section>
-
-            <section class="mb-8">
-              <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                <span class="w-2 h-8 bg-primary rounded-full"></span>
-                Contact Information
-              </h2>
-              <div class="text-slate-300 leading-relaxed space-y-4">
-                <p>If you have any questions about these Terms of Service, please contact us:</p>
-                <div class="bg-darker/50 p-6 rounded-lg border border-slate-700 mt-4">
-                  <p><strong>Email:</strong> <a href="mailto:contact@nandaydas.in" class="text-primary hover:text-blue-400 transition-colors">contact@nandaydas.in</a></p>
-                  <p><strong>Website:</strong> <a href="https://nandaydas.in" class="text-primary hover:text-blue-400 transition-colors">nandaydas.in</a></p>
-                </div>
-              </div>
-            </section>
           </div>
+        </section>
 
-          <!-- Back to Home Button -->
-          <div class="text-center mt-12">
-            <a
-              href="../index.html"
-              class="inline-flex items-center px-6 py-3 rounded-lg bg-primary text-white font-semibold hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/30 gap-2"
-            >
-              <svg
-                class="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                ></path>
-              </svg>
-              Back to Home
-            </a>
-          </div>
+      </div>
+
+      <div class="text-center mt-16 reveal" style="animation-delay:0.2s">
+        <a href="../index.html"
+          class="pill flex items-center justify-center gap-3 px-8 py-4 !text-sm font-semibold border-white/20 mx-auto w-max hover:!bg-white/10 hover:!text-white">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18">
+            </path>
+          </svg>
+          Back to Home
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-16 px-6 border-t border-white/5">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+      <div class="text-center md:text-left">
+        <p class="font-outfit font-bold text-xl mb-2">NANDAY DAS</p>
+        <p class="text-sm font-light" style="color:var(--muted)">Cross-Platform Mobile Engineer</p>
+      </div>
+      <div class="flex gap-12 text-sm font-semibold tracking-widest uppercase" style="color:var(--muted)">
+        <a href="https://github.com/nandaydas" target="_blank" rel="noopener"
+          class="hover:text-blue-400 transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/in/nanday-das/" target="_blank" rel="noopener"
+          class="hover:text-blue-400 transition-colors">LinkedIn</a>
+        <a href="mailto:contact@nandaydas.in" class="hover:text-blue-400 transition-colors">Email</a>
+      </div>
+      <div class="flex flex-col items-center md:items-end gap-2">
+        <p class="text-xs" style="color:var(--muted)">© 2026 Nanday Das. All rights reserved.</p>
+        <div class="flex gap-4 text-xs" style="color:var(--muted)">
+          <a href="./privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+          <span>|</span>
+          <a href="./terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a>
         </div>
       </div>
-    </main>
+    </div>
+  </footer>
 
-    <!-- Footer -->
-    <div id="footer"></div>
-    <script>
-        fetch("../footer.html")
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById("footer").innerHTML = data;
-            lucide.createIcons(); // render icons AFTER footer loads
-        });
-    </script>
+  <script>
+    // Custom cursor
+    const dot = document.getElementById('cursor-dot');
+    const ring = document.getElementById('cursor-outline');
 
-    <!-- JavaScript for Mobile Menu -->
-    <script>
-      // Mobile menu toggle functionality
-      const menuToggle = document.getElementById("menu-toggle");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const closeMenu = document.getElementById("close-menu");
-      const mobileLinks = document.querySelectorAll(".mobile-link");
+    window.addEventListener('mousemove', e => {
+      dot.style.left = e.clientX + 'px';
+      dot.style.top = e.clientY + 'px';
+      ring.style.left = e.clientX + 'px';
+      ring.style.top = e.clientY + 'px';
+    });
 
-      function toggleMenu() {
-        mobileMenu.classList.toggle("hidden");
-        mobileMenu.classList.toggle("flex");
-      }
+    function cursorEnter() { ring.style.transform = 'translate(-50%,-50%) scale(1.8)'; ring.style.background = 'rgba(59,130,246,0.15)'; ring.style.borderColor = 'rgba(59,130,246,0.8)'; }
+    function cursorLeave() { ring.style.transform = 'translate(-50%,-50%) scale(1)'; ring.style.background = 'transparent'; ring.style.borderColor = 'rgba(59,130,246,0.5)'; }
 
-      menuToggle.addEventListener("click", toggleMenu);
-      closeMenu.addEventListener("click", toggleMenu);
+    document.querySelectorAll('a,button,.pill').forEach(el => {
+      el.addEventListener('mouseenter', cursorEnter);
+      el.addEventListener('mouseleave', cursorLeave);
+    });
 
-      // Close menu when clicking a link
-      mobileLinks.forEach((link) => {
-        link.addEventListener("click", toggleMenu);
-      });
+    // Scroll reveal
+    new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('reveal'); });
+    }, { threshold: 0.1 }).observe && document.querySelectorAll('.reveal').forEach(el =>
+      new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('reveal'); }); }, { threshold: 0.1 }).observe(el)
+    );
+  </script>
+</body>
 
-      // Sticky Navbar background change on scroll
-      const navbar = document.querySelector("nav");
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 20) {
-          navbar.classList.add("shadow-lg");
-        } else {
-          navbar.classList.remove("shadow-lg");
-        }
-      });
-    </script>
-  </body>
 </html>
